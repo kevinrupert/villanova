@@ -526,7 +526,7 @@ header {
   background: #161418;
   color: #ffffff; }
   .mars-intro .image {
-    background: url("/../assets/imgs/mars/mars-bg.jpg");
+    background: url("/villanova/assets/imgs/mars/mars-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
