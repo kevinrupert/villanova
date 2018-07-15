@@ -888,6 +888,19 @@ header {
       margin-top: 80px;
     }
   }
+  .pull-quote {
+    max-width: 1400px;
+    padding: 48px 0;
+    @include breakpoint(large-screen-up) {
+      padding: 64px 0;
+      &.middle {
+        margin-bottom: 80px;
+      }
+    }
+    &.last {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .feature-row {

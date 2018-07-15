@@ -751,6 +751,16 @@ header {
   @media (min-width: 1000px) {
     .dean-gabriele-text .title-4 {
       margin-top: 80px; } }
+.dean-gabriele-text .pull-quote {
+  max-width: 1400px;
+  padding: 48px 0; }
+  @media (min-width: 1000px) {
+    .dean-gabriele-text .pull-quote {
+      padding: 64px 0; }
+      .dean-gabriele-text .pull-quote.middle {
+        margin-bottom: 80px; } }
+  .dean-gabriele-text .pull-quote.last {
+    padding-bottom: 0; }
 
 @media (min-width: 1000px) {
   .feature-row {
