@@ -1,0 +1,8 @@
+@include font-face("chronicle", "../fonts/ChronicleTextG1-Roman", 400, normal, $file-formats: woff woff2);
+@include font-face("chronicle", "../fonts/ChronicleTextG1-Italic", 400, italic, $file-formats: woff woff2);
+@include font-face("chronicle", "../fonts/ChronicleTextG1-Bold", 600, bold, $file-formats: woff woff2);
+@include font-face("apex", "../fonts/ApexNew-BookITalic", 400, italic, $file-formats: woff woff2);
+@include font-face("apex", "../fonts/ApexNew-Book", 400, normal, $file-formats: woff woff2);
+@include font-face("apex", "../fonts/ApexNew-Heavy", 600, bold, $file-formats: woff woff2);
+@include font-face("playfair", "../fonts/PlayfairDisplay-Black", 800, bold, $file-formats: woff woff2);
+
