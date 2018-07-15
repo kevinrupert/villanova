@@ -563,7 +563,7 @@ header {
   .mars-intro .text-container {
     padding: 32px;
     box-sizing: border-box;
-    z-index: 20;
+    z-index: 10;
     position: relative; }
     @media (min-width: 1000px) {
       .mars-intro .text-container {

@@ -654,7 +654,7 @@ header {
   .text-container {
     padding: 32px;
     box-sizing: border-box;
-    z-index: 20;
+    z-index: 10;
     position: relative;
     @include breakpoint(large-screen-up) {
       padding: 100px;
