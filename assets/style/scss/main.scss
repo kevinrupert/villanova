@@ -1115,6 +1115,9 @@ header {
       // margin-bottom: 160px;
       margin-left: 100px;
     }
+    &.first {
+      padding-top: 0;
+    }
     .title-2 {
       @include breakpoint(large-screen-up) {
         margin: 24px;
@@ -1124,6 +1127,7 @@ header {
       @include breakpoint(large-screen-up) {
         display: flex;
         flex-wrap: wrap;
+        max-width: 1200px;
       }
       .grid-item {
         // max-width: 200px;

@@ -928,13 +928,16 @@ header {
     @media (min-width: 1000px) {
       .in-memoriam .decade {
         margin-left: 100px; } }
+    .in-memoriam .decade.first {
+      padding-top: 0; }
     @media (min-width: 1000px) {
       .in-memoriam .decade .title-2 {
         margin: 24px; } }
     @media (min-width: 1000px) {
       .in-memoriam .decade .grid {
         display: flex;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        max-width: 1200px; } }
     .in-memoriam .decade .grid .grid-item {
       margin-bottom: 24px; }
       @media (min-width: 1000px) {
