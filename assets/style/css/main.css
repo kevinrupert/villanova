@@ -61,7 +61,7 @@ table {
   font-family: "apex";
   font-style: italic;
   font-weight: 400;
-  src: url("../fonts/ApexNew-BookITalic.eot?#iefix") format("embedded-opentype"), url("../fonts/ApexNew-BookITalic.woff2") format("woff2"), url("../fonts/ApexNew-BookITalic.woff") format("woff"), url("../fonts/ApexNew-BookITalic.ttf") format("truetype"), url("../fonts/ApexNew-BookITalic.svg#apex") format("svg"); }
+  src: url("../fonts/ApexNew-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/ApexNew-BookItalic.woff2") format("woff2"), url("../fonts/ApexNew-BookItalic.woff") format("woff"), url("../fonts/ApexNew-BookItalic.ttf") format("truetype"), url("../fonts/ApexNew-BookItalic.svg#apex") format("svg"); }
 @font-face {
   font-family: "apex";
   font-style: normal;
