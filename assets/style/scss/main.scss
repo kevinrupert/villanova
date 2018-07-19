@@ -115,10 +115,10 @@ body {
 .title-1 {
   font-family: $playfair;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 35px;
   @include breakpoint(large-screen-up) {
     font-size: 100px;
-    line-height: 100px;
+    line-height: 95px;
   }
 }
 
@@ -142,10 +142,10 @@ body {
 
 .regular {
   font-size: 18px;
-  line-height: 32px;
+  line-height: 26px;
   @include breakpoint(large-screen-up) {
     font-size: 22px;
-    line-height: 40px;
+    line-height: 34px;
   }
   &.mar-top {
     margin-top: 24px;
@@ -154,13 +154,13 @@ body {
     }
   }
   .drop-1 {
-    font-size: 104px;
+    font-size: 118px;
     line-height: 0.8;
     font-family: $playfair;
     float: left;
-    padding: 0 16px 0 0;
+    padding: 0 2px 0 0;
     @include breakpoint(large-screen-up) {
-      font-size: 132px;
+      font-size: 114px;
       line-height: 0.8;
     }
   }
@@ -177,24 +177,30 @@ body {
 .large {
   font-family: $playfair;
   font-size: 36px;
-  line-height: 46px;
+  line-height: 38px;
   @include breakpoint(large-screen-up) {
     font-size: 64px;
-    line-height: 74px;
+    line-height: 66px;
+  }
+  .hang {
+    margin-left: -18px;
+    @include breakpoint(large-screen-up) {
+      margin-left: -32px;
+    }
   }
 }
 
 .sans {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 24px;
   font-family: $apex;
   @include breakpoint(large-screen-up) {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 26px;
   }
   &.small {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
     letter-spacing: 0.3px;
   }
   &.mar-top {
@@ -207,13 +213,13 @@ body {
     color: $gray;
   }
   .drop {
-    line-height: 0.8;
-    font-size: 86px;
+    line-height: 0.6;
+    font-size: 78px;
     font-weight: 600;
     float: left;
-    padding: 16px 16px 0 0;
+    padding: 20px 2px 0 0;
     @include breakpoint(large-screen-up) {
-      font-size: 93px;
+      font-size: 84px;
     }
   }
 }
@@ -317,9 +323,10 @@ header {
       padding: 24px;
       box-sixing: border-box;
       transition: opacity 0.3s ease-in;
-      font-size: 14px;
-      line-height: 14px;
-      letter-spacing: 1px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       text-align: center;
       font-family: $apex;
       text-transform: uppercase;
@@ -386,6 +393,8 @@ header {
       font-family: $apex;
       font-size: 14px;
       color: $gray;
+      letter-spacing: 0.5px;
+      font-weight: 600;
     }
   }
 }
@@ -400,6 +409,49 @@ header {
   background: $black;
   height: 1px;
   margin-bottom: 16px;
+}
+
+.caption {
+  display: flex;
+  padding: 16px;
+  box-sizing: border-box;
+  @include breakpoint(large-screen-up) {
+    align-items: center;
+    width: 100%;
+  }
+  .image {
+    height: 10px;
+    width: 10px;
+    margin-right: 8px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .text {
+    @include breakpoint(large-screen-up) {
+      display: flex;
+      align-items: center;
+      padding-top: 4px;
+      box-sizing: border-box;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .sans {
+      line-height: 14px;
+    }
+    .photo {
+      text-transform: uppercase;
+      color: $gray;
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 8px;
+      @include breakpoint(large-screen-up) {
+        margin-top: 2px;
+        margin-left: 16px;
+      }
+    }
+  }
 }
 
 .section {
@@ -444,10 +496,10 @@ header {
           width: 100%;
         }
       }
-      .text {
-        padding-top: 16px;
-        box-sizing: border-box;
-        max-width: 500px;
+      .caption {
+        max-width: 750px;
+        padding-left: 0;
+        padding-right: 0;
       }
       &.wide {
         .image {
@@ -472,35 +524,36 @@ header {
         }
       }
     }
-    .text {
-      padding: 16px;
-      box-sizing: border-box;
-      max-width: 500px;
-      @include breakpoint(large-screen-up) {
-        width: 600px;
-        display: flex;
-        img {
-          margin-right: 16px;
-        }
-      }
-    }
   }
   &.full-width-image {
     padding: 0;
     .image {
       width: 100%;
+      line-height: 0;
       img {
         width: 100%;
+        line-height: 0;
       }
     }
-    .text {
-      padding: 16px;
-      box-sizing: border-box;
-      @include breakpoint(large-screen-up) {
-        width: 600px;
+    // .text {
+    //   padding: 16px;
+    //   box-sizing: border-box;
+    //   @include breakpoint(large-screen-up) {
+    //     width: 600px;
+    //     display: flex;
+    //     img {
+    //       margin-right: 16px;
+    //     }
+    //   }
+    // }
+    .caption {
+      .caption-image {
+        height: 10px;
+        // width: 10px;
         display: flex;
+        margin-right: 8px;
         img {
-          margin-right: 16px;
+          height: 100%;
         }
       }
     }
@@ -669,6 +722,7 @@ header {
       }
       .drop-1 {
         // color: $red; 
+        padding-right: 4px;
       }
       .title-container {
         margin-bottom: 48px;
@@ -684,12 +738,38 @@ header {
 
 .mars-alumni {
   background: $light-blue;
-  .alumni {
-    margin-top: 32px;
-    border-left: 1px solid $black;
-    padding-left: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large-screen-up) {
+    padding-bottom: 120px;
+  }
+  .intro-text {
+    max-width: 700px;
     @include breakpoint(large-screen-up) {
+      margin: 80px 0;
+    }
+    .drop {
+      padding-top: 22px;
+      @include breakpoint(large-screen-up) {
+        padding-top: 24px;
+      }
+    }
+  }
+  .alumni-grid {
+    @include breakpoint(large-screen-up) {
+      display: flex;
       margin-top: 48px;
+    }
+    .alumni {
+      margin-top: 32px;
+      border-left: 1px solid $black;
+      padding-left: 32px;
+      @include breakpoint(large-screen-up) {
+        padding: 0 32px;
+        box-sizing: border-box;
+      }
     }
   }
 }
@@ -763,6 +843,13 @@ header {
 
 .francis-welcome {
   background: $cream;
+  .inline-image {
+    .caption {
+      .photo {
+        margin-left: 0;
+      }
+    }
+  }
   .rule-2 {
     margin-top: 48px;
     @include breakpoint(large-screen-up) {
@@ -785,14 +872,15 @@ header {
     box-sizing: border-box;
     z-index: 10;
     position: relative;
-    padding-top: 100px;
+    // padding-top: 100px;
     @include breakpoint(large-screen-up) {
       position: absolute;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 50vw;
+      align-items: center;
+      width: 100%;
       padding-top: 0;
     }
     .all {
@@ -805,30 +893,50 @@ header {
   }
   .image {
     @include breakpoint(large-screen-up) {
-      height: 100vh;
+      height: calc(100vh - 76px);
       width: 100%;
       overflow: hidden;
+      display: flex;
+      align-items: flex-end;
     }
     img {
       width: 100%;
-      @include breakpoint(large-screen-up) {
-        object-fit: cover;
-        width: 60%;
-        min-height: 100%;
+      &.desktop {
+        display: none;
+        @include breakpoint(large-screen-up) {
+          display: inherit;
+        }
+      }
+      &.mobile {
+        @include breakpoint(large-screen-up) {
+          display: none;
+        }
       }
     }
   }
 }
 
 .service-1 {
-  background: $yellow;
+  // background: $yellow;
 }
 
 .service-outro {
   background: $yellow;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+    flex-direction: row;
+  }
   .text {
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 32px;
+      box-sizing: border-box;
+    }
     &:nth-child(2) {
       margin-top: 80px;
+      @include breakpoint(large-screen-up) {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -882,7 +990,7 @@ header {
   @include breakpoint(large-screen-up) {
     width: 50%;
   }
-  .title-4 {
+  .title-2 {
     margin-top: 48px;
     @include breakpoint(large-screen-up) {
       margin-top: 80px;
@@ -903,93 +1011,130 @@ header {
   }
 }
 
-.feature-row {
-  @include breakpoint(large-screen-up) {
-    display: flex;
-    flex-wrap: wrap; 
-  }
+.cover-story {
+  position: relative;
+  background: $black;
   a {
-    text-decoration: none;
     display: block;
-    height: 100%;
-    width: 100%;
+    text-decoration: none;
     &:hover {
-      .image {
-        img {
-          transition: all 0.5s ease;
-          transform: scale(1.05);
-        }
-      }
-      .text {
-        h2 {
-          transition: all 0.5s ease;
-          transform: translateY(-24px);
-        }
+      img {
+        transition: 0.8s all ease;
+        transform: scale(1.05);
       }
     }
+  }
+  .image {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     @include breakpoint(large-screen-up) {
-      width: 50%;
-      height: calc(100vh - 76px);
+      height: 80vh;
+    }
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      transition: 0.8s all ease;
+    }
+  }
+  .text {
+    position: absolute;
+    color: $white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: $image-overlay;
+    @include breakpoint(large-screen-up) {
+      padding: 80px;
+      justify-content: center;
     }
     @include breakpoint(extra-large-screen-up) {
-      width: 33.333%;
+      padding: 200px;
     }
-    .feature-item {
-      background: $black;
-      color: $white;
-      height: 500px;
-      position: relative;
-      overflow: hidden;
+    .sans {
+      max-width: 400px;
+    }
+  }
+}
+
+.story-grid {
+  // @include breakpoint(extra-large-screen-up) {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  .grid-container {
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-wrap: wrap;
+      padding: 80px;
+    }
+    @include breakpoint(extra-large-screen-up) {
+      padding: 200px;
+    }
+    .grid-item {
+      box-sizing: border-box;
+      margin-bottom: 32px;
+      border-bottom: 1px solid $black;
       @include breakpoint(large-screen-up) {
-        height: calc(100vh - 76px);
+        margin: 0;
+        padding: 0 24px 24px 24px;
+        width: 33.333%;
+        min-height: 200px;
+        border-left: 1px solid $black;
+        border-bottom: none;
+        margin-bottom: 48px;
       }
-      .text {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-        padding: 32px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        &.overlay {
-          background: $image-overlay;
+      @include breakpoint(extra-large-screen-up) {
+        width: 25%;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include breakpoint(large-screen-up) {
+          margin-bottom: 48px;
         }
-        &.black {
-          color: $black;
-        }
-        h2 {
-          transition: all 0.5s ease;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        &:hover {
+          img {
+            transition: 0.8s all ease;
+            transform: scale(1.05);
+          }
         }
       }
       .image {
-        height: 100%;
-        width: 100%;
+        height: 160px;
         display: flex;
         align-items: center;
         justify-content: center;
-        img {
-          height: 100%;
-          min-width: 100%;
-          object-fit: cover;
-          transition: all 0.5s ease;
-          @include breakpoint(large-screen-up) {
-            min-width: none;
-            min-height: 100%;
-            height: initial;
-            width: 100%;
-          }
-          // @include breakpoint(extra-large-screen-up) {
-          //   width: initial;
-          //   height: 100%;
-          // }
+        overflow: hidden;
+        margin-bottom: 32px;
+        @include breakpoint(large-screen-up) {
+          height: 250px;
         }
+        img {
+          width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          transition: 0.8s all ease;
+        }
+      }
+      .text {
+        color: $black;
+        padding-bottom: 32px;
       }
     }
   }
@@ -1138,6 +1283,115 @@ header {
           width: 25%;
           max-width: none;
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $black;
+  padding: 32px;
+  box-sizing: border-box;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $apex;
+  z-index: 10;
+  position: relative;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+    padding: 76px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+  }
+  .links {
+    margin-bottom: 48px;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include breakpoint(large-screen-up) {
+      width: 25%;
+      box-sizing: border-box;
+      margin-bottom: 0;
+    }
+    .logo {
+      margin-bottom: 48px;
+    }
+    ul {
+      li {
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .credits {
+    margin-bottom: 48px;
+    @include breakpoint(large-screen-up) {
+      width: 25%;
+      padding: 0 32px;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      border-left: 1px solid $white;
+    }
+    .credit {
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #EBE4C1;
+    text-transform: uppercase;
+  }
+  .contact {
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 0 0 0 32px;
+      box-sizing: border-box;
+      height: 352px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid $white;
+    }
+    .mail {
+      margin-bottom: 48px;
+      @include breakpoint(extra-large-screen-up) {
+        max-width: 700px;
+      }
+    }
+  }
+  .social {
+    @include breakpoint(large-screen-up) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .logo {
+      width: 200px;
+      margin-bottom: 24px;
+      @include breakpoint(large-screen-up) {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .social-icons {
+      display: flex;
+      @include breakpoint(large-screen-up) {
+        margin-bottom: -12px;
+      }
+      .icon {
+        margin-right: 16px;
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
