@@ -1064,7 +1064,7 @@ header {
       width: 50%;
     }
     .tooltip {
-      background: $white;
+      background-color: rgba($white, 0.8);
       height: 36px;
       width: 36px;
       position: absolute;
@@ -1077,12 +1077,16 @@ header {
       justify-content: center;
       font-family: $apex;
       font-weight: bold;
+      font-size: 16px;
+      line-height: 12px;
       transition: all 0.3s ease;
       @include breakpoint(large-screen-up) {
-        width: 48px;
-        height: 48px;
+        // width: 48px;
+        // height: 48px;
         &:hover {
+          cursor: pointer;
           transform: scale(1.1);
+          background-color: $white;
         }
       }
     }
@@ -1119,6 +1123,76 @@ header {
     .tip-2 {
       left: 10%;
       top: 40%;
+    }
+    .tip-3 {
+      left: 30%;
+      top: 32%;
+    }
+    .tip-4 {
+      left: 50%;
+      top: 32%;
+    }
+    .tip-5 {
+      left: 70%;
+      top: 50%;
+    }
+    .tip-6 {
+      left: 70%;
+      top: 60%;
+    }
+    .tip-7 {
+      left: 70%;
+      top: 80%;
+    }
+    .tip-8 {
+      left: 20%;
+      top: 70%;
+    }
+  }
+  .window-2 {
+    .tip-1 {
+      left: 30%;
+      top: 20%;
+    }
+    .tip-2 {
+      left: 10%;
+      top: 32%;
+    }
+    .tip-3 {
+      left: 30%;
+      top: 32%;
+    }
+    .tip-4 {
+      left: 50%;
+      top: 32%;
+    }
+    .tip-5 {
+      left: 70%;
+      top: 32%;
+    }
+    .tip-6 {
+      left: 40%;
+      top: 60%;
+    }
+    .tip-7 {
+      left: 50%;
+      top: 55%;
+    }
+    .tip-8 {
+      left: 80%;
+      top: 60%;
+    }
+    .tip-9 {
+      left: 20%;
+      top: 60%;
+    }
+    .tip-10 {
+      left: 80%;
+      top: 70%;
+    }
+    .tip-11 {
+      left: 12%;
+      top: 80%;
     }
   }
 }
