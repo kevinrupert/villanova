@@ -925,6 +925,9 @@ header {
 .windows .window-1 .tip-1 {
   left: 30%;
   top: 20%; }
+.windows .window-1 .tip-2 {
+  left: 10%;
+  top: 40%; }
 
 .art-new-light {
   background: #000000;
@@ -1265,6 +1268,7 @@ footer {
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-customized .tooltipster-content {
   color: #000000;
   font-family: "apex", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 14px;
   padding: 8px; }
 
 .rotate {

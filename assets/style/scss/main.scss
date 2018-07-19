@@ -1116,6 +1116,10 @@ header {
       left: 30%;
       top: 20%;
     }
+    .tip-2 {
+      left: 10%;
+      top: 40%;
+    }
   }
 }
 
@@ -1540,6 +1544,7 @@ footer {
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-customized .tooltipster-content {
 	color: $black;
   font-family: $apex;
+  font-size: 14px;
 	padding: 8px;
 }
 
