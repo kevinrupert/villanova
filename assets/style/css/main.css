@@ -455,7 +455,8 @@ header {
         display: flex;
         margin-right: 8px; }
         .section.center .inline-image .caption .caption-image img {
-          height: 100%; }
+          height: 100%;
+          width: auto; }
       .section.center .inline-image .caption .text {
         max-width: none; }
       .section.center .inline-image.wide .image {

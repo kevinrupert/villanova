@@ -503,11 +503,11 @@ header {
       .caption {
         .caption-image {
           height: 10px;
-          // width: 10px;
           display: flex;
           margin-right: 8px;
           img {
             height: 100%;
+            width: auto;
           }
         }
         .text {
