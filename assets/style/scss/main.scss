@@ -118,7 +118,7 @@ body {
   line-height: 35px;
   @include breakpoint(large-screen-up) {
     font-size: 100px;
-    line-height: 95px;
+    line-height: 98px;
   }
 }
 
@@ -130,7 +130,7 @@ body {
 
 .title-3 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .title-4 {
@@ -232,10 +232,10 @@ body {
 
 header {
   height: 76px;
-  // position: fixed;
+  position: fixed;
   z-index: 50;
   width: 100%;
-  // background: rgba($white, 0.98);
+  background: $white;
   box-sizing: border-box;
   top: 0;
   transition: all 0.1s ease-in;
@@ -399,6 +399,10 @@ header {
   }
 }
 
+.top {
+  margin-top: 76px;
+}
+
 .rule-1 {
   background: $black;
   height: 18px;
@@ -497,9 +501,18 @@ header {
         }
       }
       .caption {
-        max-width: 750px;
-        padding-left: 0;
-        padding-right: 0;
+        .caption-image {
+          height: 10px;
+          // width: 10px;
+          display: flex;
+          margin-right: 8px;
+          img {
+            height: 100%;
+          }
+        }
+        .text {
+          max-width: none;
+        }
       }
       &.wide {
         .image {
@@ -1282,6 +1295,14 @@ header {
   }
 }
 
+.page-title {
+  padding: 32px;
+  box-sizing: border-box;
+  @include breakpoint(large-screen-up) {
+    padding: 80px;
+  }
+}
+
 .story-grid {
   .grid-container {
     padding: 32px;
@@ -1308,7 +1329,7 @@ header {
         margin-bottom: 48px;
       }
       @include breakpoint(extra-large-screen-up) {
-        width: 25%;
+        // width: 25%;
       }
       &:last-child {
         margin-bottom: 0;
@@ -1347,6 +1368,198 @@ header {
         color: $black;
         padding-bottom: 32px;
       }
+      &.half {
+        .image {
+          @include breakpoint(large-screen-up) {
+            height: 300px;
+          }
+        }
+        @include breakpoint(large-screen-up) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.shorts {
+  background: $cream;
+  .shorts-title {
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      padding: 80px;
+    }
+  }
+  .shorts-grid {
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px;
+    }
+    @include breakpoint(extra-large-screen-up) {
+      padding: 200px;
+    }
+    .shorts-grid-item {
+      box-sizing: border-box;
+      margin-bottom: 48px;
+      @include breakpoint(large-screen-up) {
+        margin: 0;
+        padding: 0 32px 32px 0;
+        width: 50%;
+        min-height: 200px;
+        margin-bottom: 48px;
+      }
+      .rule {
+        width: 100%;
+        background: $black;
+        height: 8px;
+        margin-bottom: 8px;
+      }
+      &.image-text {
+        .image-text-container {
+          @include breakpoint(large-screen-up) {
+            display: flex;
+          }
+          .image {
+            flex: 1;
+            max-width: 100px;
+            img {
+              width: 100%;
+              border-radius: 100%;
+            }
+          }
+          .text {
+            @include breakpoint(large-screen-up) {
+              flex: 2;
+              padding-left: 16px;
+            }
+          }
+        }
+      }
+      &.full-width {
+        .rule {
+          max-width: 50px;
+        }
+        .image {
+          margin-bottom: 8px;
+          @include breakpoint(large-screen-up) {
+            width: 50%;
+            margin-bottom: 0;
+            padding-right: 32px;
+            // box-sizing: border-box;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .text {
+          @include breakpoint(large-screen-up) {
+            width: 50%;
+            // padding-left: 32px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+        @include breakpoint(large-screen-up) {
+          width: 100%;
+          display: flex;
+        }
+      }
+      &.small-image {
+        .image {
+          @include breakpoint(large-screen-up) {
+            width: 30%;
+          }
+        }
+        .text {
+          @include breakpoint(large-screen-up) {
+            width: 60%;
+          }
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include breakpoint(large-screen-up) {
+          margin-bottom: 48px;
+        }
+      } 
+    }
+  }
+}
+
+.article-title {
+  width: 100%;
+}
+
+.article-text {
+  margin-top: 32px;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+  }
+  .article-main {
+    margin-bottom: 48px;
+    @include breakpoint(large-screen-up) {
+      width: 75%;
+      padding-right: 32px;
+      box-sizing: border-box;
+    }
+    .title-1 {
+      max-width: none;
+    }
+    .title-2 {
+      margin-top: 48px;
+    }
+    .stats {
+      margin-top: 48px;
+      .large {
+        font-family: $chronicle;
+      }
+      .stat {
+        margin-top: 48px;
+      }
+      .number {
+        font-size: 64px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        @include breakpoint(large-screen-up) {
+          font-size: 76px;
+        }
+      }
+    }
+  }
+  .article-aside {
+    @include breakpoint(large-screen-up) {
+      width: 25%;
+    }
+    .article-aside-image {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .article-quote {
+      @include breakpoint(large-screen-up) {
+        text-align: center;
+        .regular {
+          font-size: 18px;
+          line-height: 20px;
+          margin-top: 8px;
+        }
+      }
+      .big-quote {
+        font-size: 48px;
+        @include breakpoint(large-screen-up) {
+          font-size: 100px;
+        }
+      }
+      .rule-2 {
+        margin-top: 16px;
+      }
     }
   }
 }
@@ -1369,7 +1582,7 @@ header {
       display: flex;
       margin-bottom: 0;
       border-left: none;
-      padding: 0 32px 0 0;
+      padding: 0 32px 0 48px;
     }
     &:last-child {
       // margin-bottom: 0;
