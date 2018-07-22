@@ -290,6 +290,7 @@ header {
       transition: all 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
       -webkit-transform-style: preserve-3d;
       -webkit-backface-visibility: hidden;
+      margin-top: 0;
       &.middle {
         opacity: 1;
       }
@@ -364,8 +365,10 @@ header {
       .bar {
         background-color: $white;
         transition-delay: 0.2s;
+        margin-top: 0;
         &.top {
           transform: translateY(8px) rotate(45deg);
+          margin-top: 0;
         }
         &.middle {
           opacity: 0;

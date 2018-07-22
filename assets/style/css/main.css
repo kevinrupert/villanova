@@ -276,7 +276,8 @@ header {
       opacity: 1;
       transition: all 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
       -webkit-transform-style: preserve-3d;
-      -webkit-backface-visibility: hidden; }
+      -webkit-backface-visibility: hidden;
+      margin-top: 0; }
       header .menu-icon .bar.middle {
         opacity: 1; }
   header .menu {
@@ -341,9 +342,11 @@ header {
     position: fixed; }
     header.menu-opened .menu-icon .bar {
       background-color: #ffffff;
-      transition-delay: 0.2s; }
+      transition-delay: 0.2s;
+      margin-top: 0; }
       header.menu-opened .menu-icon .bar.top {
-        transform: translateY(8px) rotate(45deg); }
+        transform: translateY(8px) rotate(45deg);
+        margin-top: 0; }
       header.menu-opened .menu-icon .bar.middle {
         opacity: 0;
         height: 0; }
