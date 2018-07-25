@@ -1385,15 +1385,14 @@ header {
     margin-bottom: 48px; }
     @media (min-width: 1000px) {
       .in-memoriam .title-1 {
-        padding: 100px 0;
-        margin-bottom: 80px; } }
+        padding-left: 80px; } }
   .in-memoriam .decade {
     padding: 32px;
     box-sizing: border-box;
     border-left: 1px solid #000000; }
     @media (min-width: 1000px) {
       .in-memoriam .decade {
-        margin-left: 100px; } }
+        margin-left: 80px; } }
     .in-memoriam .decade.first {
       padding-top: 0; }
     @media (min-width: 1000px) {

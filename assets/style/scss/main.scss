@@ -1794,8 +1794,9 @@ header {
   .title-1 {
     margin-bottom: 48px;
     @include breakpoint(large-screen-up) {
-      padding: 100px 0;
-      margin-bottom: 80px;
+      padding-left: 80px;
+      // padding: 100px 0;
+      // margin-bottom: 80px;
     }
   }
   .decade {
@@ -1804,7 +1805,7 @@ header {
     border-left: 1px solid $black;
     @include breakpoint(large-screen-up) {
       // margin-bottom: 160px;
-      margin-left: 100px;
+      margin-left: 80px;
     }
     &.first {
       padding-top: 0;
