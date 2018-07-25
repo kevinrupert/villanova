@@ -1203,7 +1203,7 @@ header {
         .shorts .shorts-grid .shorts-grid-item {
           margin: 0;
           padding: 0 32px 32px 0;
-          width: 50%;
+          width: 25%;
           min-height: 200px;
           margin-bottom: 48px; } }
       .shorts .shorts-grid .shorts-grid-item .rule {
@@ -1211,19 +1211,18 @@ header {
         background: #000000;
         height: 8px;
         margin-bottom: 8px; }
-      @media (min-width: 1000px) {
-        .shorts .shorts-grid .shorts-grid-item.image-text .image-text-container {
-          display: flex; } }
+      .shorts .shorts-grid .shorts-grid-item .image img {
+        width: 100%; }
       .shorts .shorts-grid .shorts-grid-item.image-text .image-text-container .image {
         flex: 1;
-        max-width: 100px; }
+        max-width: 100px;
+        margin-bottom: 16px; }
         .shorts .shorts-grid .shorts-grid-item.image-text .image-text-container .image img {
           width: 100%;
           border-radius: 100%; }
       @media (min-width: 1000px) {
         .shorts .shorts-grid .shorts-grid-item.image-text .image-text-container .text {
-          flex: 2;
-          padding-left: 16px; } }
+          flex: 2; } }
       .shorts .shorts-grid .shorts-grid-item.full-width .rule {
         max-width: 50px; }
       .shorts .shorts-grid .shorts-grid-item.full-width .image {
