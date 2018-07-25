@@ -1078,10 +1078,20 @@ header {
   @media (min-width: 1000px) {
     .page-title {
       padding: 80px; } }
+  @media (min-width: 1600px) {
+    .page-title {
+      display: flex;
+      justify-content: center; }
+      .page-title h1 {
+        width: 100%;
+        max-width: 1400px;
+        padding-left: 80px;
+        box-sizing: border-box; } }
 
 @media (min-width: 1600px) {
   .story-grid {
-    display: flex; } }
+    display: flex;
+    justify-content: center; } }
 .story-grid .grid-container {
   padding: 32px;
   box-sizing: border-box; }
@@ -1183,12 +1193,23 @@ header {
 
 .shorts {
   background: #FFFBEF; }
+  @media (min-width: 1600px) {
+    .shorts {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center; } }
   .shorts .shorts-title {
     padding: 32px;
     box-sizing: border-box; }
     @media (min-width: 1000px) {
       .shorts .shorts-title {
-        padding: 80px; } }
+        padding: 80px;
+        width: 100%;
+        box-sizing: border-box; } }
+    @media (min-width: 1600px) {
+      .shorts .shorts-title {
+        max-width: 1400px; } }
   .shorts .shorts-grid {
     padding: 32px;
     box-sizing: border-box; }
@@ -1200,7 +1221,7 @@ header {
         padding-top: 0; } }
     @media (min-width: 1600px) {
       .shorts .shorts-grid {
-        padding: 200px; } }
+        max-width: 1400px; } }
     @media (min-width: 1000px) {
       .shorts .shorts-grid .column-1, .shorts .shorts-grid .column-2, .shorts .shorts-grid .column-3, .shorts .shorts-grid .column-4 {
         width: 25%; } }
