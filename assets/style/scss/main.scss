@@ -475,8 +475,11 @@ header {
   padding: 32px;
   box-sizing: border-box;
   @include breakpoint(large-screen-up) {
-    padding: 80px 120px;
+    padding: 80px;
     // margin: 64px 0;
+  }
+  &.middle {
+    padding-top: 0;
   }
   &.last {
     margin-bottom: 0;
@@ -498,6 +501,7 @@ header {
       @include breakpoint(large-screen-up) {
         padding: 64px 0;
         &.middle {
+          margin-top: 0;
           margin-bottom: 80px;
         }
       }

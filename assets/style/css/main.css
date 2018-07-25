@@ -433,7 +433,9 @@ header {
   box-sizing: border-box; }
   @media (min-width: 1000px) {
     .section {
-      padding: 80px 120px; } }
+      padding: 80px; } }
+  .section.middle {
+    padding-top: 0; }
   .section.last {
     margin-bottom: 0; }
   .section.center {
@@ -453,6 +455,7 @@ header {
         .section.center .pull-quote {
           padding: 64px 0; }
           .section.center .pull-quote.middle {
+            margin-top: 0;
             margin-bottom: 80px; } }
       .section.center .pull-quote.last {
         padding-bottom: 0; }
