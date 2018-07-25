@@ -124,13 +124,13 @@ body {
 
 .title-2 {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .title-3 {
   font-weight: 600;
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .title-4 {
@@ -144,13 +144,13 @@ body {
   font-size: 18px;
   line-height: 26px;
   @include breakpoint(large-screen-up) {
-    font-size: 21px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
   }
   &.mar-top {
     margin-top: 24px;
     @include breakpoint(large-screen-up) {
-      margin-top: 36px;
+      margin-top: 12px;
     }
   }
   .drop-1 {
@@ -160,7 +160,7 @@ body {
     float: left;
     padding: 0 2px 0 0;
     @include breakpoint(large-screen-up) {
-      font-size: 106px;
+      font-size: 110px;
       line-height: 0.8;
     }
   }
@@ -195,8 +195,8 @@ body {
   line-height: 24px;
   font-family: $apex;
   @include breakpoint(large-screen-up) {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 23px;
   }
   &.small {
     font-size: 14px;
@@ -206,7 +206,7 @@ body {
   &.mar-top {
     margin-top: 24px;
     @include breakpoint(large-screen-up) {
-      margin-top: 36px;
+      margin-top: 10px;
     }
   }
   &.gray {
@@ -219,13 +219,20 @@ body {
     float: left;
     padding: 20px 2px 0 0;
     @include breakpoint(large-screen-up) {
-      font-size: 84px;
+      font-size: 101px;
+      line-height: 0.7;
+      padding-top: 22px;
     }
   }
 }
 
 .subhead {
   max-width: 400px;
+  font-size: 16px;
+  line-height: 23px;
+  @include breakpoint(large-screen-up) {
+    font-size: 18px;
+  }
 }
 
 // Design
@@ -480,7 +487,7 @@ header {
       flex-direction: column;
     }
     .text {
-      max-width: 750px;
+      max-width: 645px;
     }
     .pull-quote {
       max-width: 1400px;
@@ -498,7 +505,7 @@ header {
     .inline-image {
       margin-top: 32px;
       .image {
-        max-width: 750px;
+        max-width: 645px;
         img {
           width: 100%;
         }
@@ -649,7 +656,7 @@ header {
         @include breakpoint(large-screen-up) {
           flex: 2;
           width: 100%;
-          max-width: 750px;
+          max-width: 645px;
         }
       }
       .inline-image {
@@ -658,7 +665,7 @@ header {
           margin-top: 48px;
         }
         .image {
-          max-width: 750px;
+          max-width: 645px;
           img {
             width: 100%;
           }
@@ -732,13 +739,16 @@ header {
       margin-top: -100px;
       z-index: 10;
       position: relative;
-      max-width: 750px;
+      max-width: 645px;
       @include breakpoint(large-screen-up) {
         margin-top: -70vh;
       }
       .drop-1 {
         // color: $red; 
         padding-right: 4px;
+        @include breakpoint(large-screen-up) {
+          font-size: 124px;
+        }
       }
       .title-container {
         margin-bottom: 48px;
@@ -762,7 +772,7 @@ header {
     padding-bottom: 120px;
   }
   .intro-text {
-    max-width: 700px;
+    max-width: 645px;
     @include breakpoint(large-screen-up) {
       margin: 80px 0;
     }
@@ -1380,6 +1390,64 @@ header {
         }
         @include breakpoint(large-screen-up) {
           width: 50%;
+        }
+      }
+      &.highlight {
+          &.me-too {
+            @include breakpoint(large-screen-up) {
+              .text {
+                background: $light-blue;
+                color: $black;
+              }
+            }
+          }
+        @include breakpoint(large-screen-up) {
+          width: 100%;
+          border-left: none;
+          padding: 0;
+          padding-right: 24px;
+          height: 500px;
+          a {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            height: 500px;
+          }
+          // .container {
+          //   width: 60%;
+          //   height: 500px;
+          // }
+          .image {
+            width: 60%;
+            height: 500px;
+            background: $light-blue;
+            margin-bottom: 0;
+            img {
+              min-height: initial;
+              height: 100%;
+              width: initial;
+            }
+          }
+          .text {
+            padding: 48px;
+            box-sizing: border-box;
+            background: $black;
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $white;
+            // .sans {
+            //   font-size: 18px;
+            //   margin-top: 0;
+            // }
+            // .title-2 {
+            //   font-size: 48px;
+            //   line-height: 48px;
+            //   font-family: $playfair;
+            // }
+          }
         }
       }
     }
