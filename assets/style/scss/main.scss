@@ -1346,6 +1346,12 @@ header {
         border-left: 1px solid $black;
         border-bottom: none;
         margin-bottom: 48px;
+        &.first {
+          border-left: none;
+        }
+        &.last {
+          padding-right: 0;
+        }
       }
       @include breakpoint(extra-large-screen-up) {
         // width: 25%;
@@ -1410,7 +1416,7 @@ header {
           width: 100%;
           border-left: none;
           padding: 0;
-          padding-right: 24px;
+          // padding-right: 24px;
           height: 500px;
           a {
             display: flex;

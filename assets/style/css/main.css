@@ -1106,7 +1106,11 @@ header {
         min-height: 200px;
         border-left: 1px solid #000000;
         border-bottom: none;
-        margin-bottom: 48px; } }
+        margin-bottom: 48px; }
+        .story-grid .grid-container .grid-item.first {
+          border-left: none; }
+        .story-grid .grid-container .grid-item.last {
+          padding-right: 0; } }
     .story-grid .grid-container .grid-item:last-child {
       margin-bottom: 0; }
       @media (min-width: 1000px) {
@@ -1151,7 +1155,6 @@ header {
         width: 100%;
         border-left: none;
         padding: 0;
-        padding-right: 24px;
         height: 500px; }
         .story-grid .grid-container .grid-item.highlight a {
           display: flex;
