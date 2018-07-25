@@ -450,13 +450,10 @@ header {
       max-width: 645px; }
     .section.center .pull-quote {
       max-width: 1400px;
-      padding: 48px 0; }
+      padding: 24px 0; }
       @media (min-width: 1000px) {
-        .section.center .pull-quote {
-          padding: 64px 0; }
-          .section.center .pull-quote.middle {
-            margin-top: 0;
-            margin-bottom: 80px; } }
+        .section.center .pull-quote.middle {
+          margin-top: 0; } }
       .section.center .pull-quote.last {
         padding-bottom: 0; }
     .section.center .inline-image {
@@ -734,11 +731,8 @@ header {
   background: #FFFBEF; }
   .francis-welcome .inline-image .caption .photo {
     margin-left: 0; }
-  .francis-welcome .rule-2 {
+  .francis-welcome .title-2 {
     margin-top: 48px; }
-    @media (min-width: 1000px) {
-      .francis-welcome .rule-2 {
-        margin-top: 80px; } }
 
 .service-intro {
   background-color: #FFDF00; }
@@ -849,12 +843,7 @@ header {
   margin-top: 24px; }
 .dean-gabriele-text .pull-quote {
   max-width: 1400px;
-  padding: 48px 0; }
-  @media (min-width: 1000px) {
-    .dean-gabriele-text .pull-quote {
-      padding: 64px 0; }
-      .dean-gabriele-text .pull-quote.middle {
-        margin-bottom: 80px; } }
+  padding: 24px 0; }
   .dean-gabriele-text .pull-quote.last {
     padding-bottom: 0; }
 

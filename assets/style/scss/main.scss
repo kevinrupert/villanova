@@ -497,12 +497,12 @@ header {
     }
     .pull-quote {
       max-width: 1400px;
-      padding: 48px 0;
+      padding: 24px 0;
       @include breakpoint(large-screen-up) {
-        padding: 64px 0;
+        // padding: 64px 0;
         &.middle {
           margin-top: 0;
-          margin-bottom: 80px;
+          // margin-bottom: 80px;
         }
       }
       &.last {
@@ -883,10 +883,10 @@ header {
       }
     }
   }
-  .rule-2 {
+  .title-2 {
     margin-top: 48px;
     @include breakpoint(large-screen-up) {
-      margin-top: 80px;
+      // margin-top: 80px;
     }
   }
 }
@@ -1032,11 +1032,11 @@ header {
   }
   .pull-quote {
     max-width: 1400px;
-    padding: 48px 0;
+    padding: 24px 0;
     @include breakpoint(large-screen-up) {
-      padding: 64px 0;
+      // padding: 64px 0;
       &.middle {
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
       }
     }
     &.last {
