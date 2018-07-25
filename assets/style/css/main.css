@@ -653,7 +653,7 @@ header {
     max-width: 645px; }
     @media (min-width: 1000px) {
       .mars-alumni .intro-text {
-        margin: 80px 0; } }
+        margin: 48px 0; } }
     .mars-alumni .intro-text .drop {
       padding-top: 22px; }
       @media (min-width: 1000px) {
@@ -845,9 +845,6 @@ header {
     width: 50%; } }
 .dean-gabriele-text .title-2 {
   margin-top: 48px; }
-  @media (min-width: 1000px) {
-    .dean-gabriele-text .title-2 {
-      margin-top: 80px; } }
 .dean-gabriele-text .pull-quote {
   max-width: 1400px;
   padding: 48px 0; }
@@ -1082,6 +1079,10 @@ header {
     .page-title {
       padding: 80px; } }
 
+@media (min-width: 1600px) {
+  .story-grid {
+    display: flex;
+    justify-content: center; } }
 .story-grid .grid-container {
   padding: 32px;
   box-sizing: border-box; }
@@ -1089,10 +1090,11 @@ header {
     .story-grid .grid-container {
       display: flex;
       flex-wrap: wrap;
-      padding: 80px; } }
+      padding: 80px;
+      box-sizing: border-box; } }
   @media (min-width: 1600px) {
     .story-grid .grid-container {
-      padding: 200px; } }
+      max-width: 1400px; } }
   .story-grid .grid-container .grid-item {
     box-sizing: border-box;
     margin-bottom: 32px;
@@ -1141,10 +1143,6 @@ header {
     @media (min-width: 1000px) {
       .story-grid .grid-container .grid-item.half {
         width: 50%; } }
-    @media (min-width: 1000px) {
-      .story-grid .grid-container .grid-item.highlight.me-too .text {
-        background: #E1F2FC;
-        color: #000000; } }
     @media (min-width: 1000px) {
       .story-grid .grid-container .grid-item.highlight {
         width: 100%;

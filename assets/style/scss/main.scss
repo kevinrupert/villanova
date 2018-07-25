@@ -774,7 +774,7 @@ header {
   .intro-text {
     max-width: 645px;
     @include breakpoint(large-screen-up) {
-      margin: 80px 0;
+      margin: 48px 0;
     }
     .drop {
       padding-top: 22px;
@@ -1020,7 +1020,7 @@ header {
   .title-2 {
     margin-top: 48px;
     @include breakpoint(large-screen-up) {
-      margin-top: 80px;
+      // margin-top: 80px;
     }
   }
   .pull-quote {
@@ -1318,6 +1318,10 @@ header {
 }
 
 .story-grid {
+  @include breakpoint(extra-large-screen-up) {
+    display: flex;
+    justify-content: center;
+  }
   .grid-container {
     padding: 32px;
     box-sizing: border-box;
@@ -1325,9 +1329,10 @@ header {
       display: flex;
       flex-wrap: wrap;
       padding: 80px;
+      box-sizing: border-box;
     }
     @include breakpoint(extra-large-screen-up) {
-      padding: 200px;
+      max-width: 1400px;
     }
     .grid-item {
       box-sizing: border-box;
@@ -1393,14 +1398,14 @@ header {
         }
       }
       &.highlight {
-          &.me-too {
-            @include breakpoint(large-screen-up) {
-              .text {
-                background: $light-blue;
-                color: $black;
-              }
-            }
-          }
+        // &.me-too {
+        //   @include breakpoint(large-screen-up) {
+        //     .text {
+        //       background: $light-blue;
+        //       color: $black;
+        //     }
+        //   }
+        // }
         @include breakpoint(large-screen-up) {
           width: 100%;
           border-left: none;
