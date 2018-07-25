@@ -126,6 +126,9 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 26px;
+  &.mar-top {
+    margin-top: 24px;
+  }
 }
 
 .title-3 {
@@ -774,7 +777,7 @@ header {
   .intro-text {
     max-width: 645px;
     @include breakpoint(large-screen-up) {
-      margin: 48px 0;
+      // margin: 48px 0;
     }
     .drop {
       padding-top: 22px;
@@ -1018,7 +1021,7 @@ header {
     width: 50%;
   }
   .title-2 {
-    margin-top: 48px;
+    margin-top: 24px;
     @include breakpoint(large-screen-up) {
       // margin-top: 80px;
     }

@@ -136,6 +136,8 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 26px; }
+  .title-2.mar-top {
+    margin-top: 24px; }
 
 .title-3 {
   font-weight: 600;
@@ -651,9 +653,6 @@ header {
       padding-bottom: 120px; } }
   .mars-alumni .intro-text {
     max-width: 645px; }
-    @media (min-width: 1000px) {
-      .mars-alumni .intro-text {
-        margin: 48px 0; } }
     .mars-alumni .intro-text .drop {
       padding-top: 22px; }
       @media (min-width: 1000px) {
@@ -844,7 +843,7 @@ header {
   .dean-gabriele-text {
     width: 50%; } }
 .dean-gabriele-text .title-2 {
-  margin-top: 48px; }
+  margin-top: 24px; }
 .dean-gabriele-text .pull-quote {
   max-width: 1400px;
   padding: 48px 0; }
