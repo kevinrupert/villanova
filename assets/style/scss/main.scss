@@ -1320,7 +1320,7 @@ header {
 .story-grid {
   @include breakpoint(extra-large-screen-up) {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
   }
   .grid-container {
     padding: 32px;
@@ -1398,14 +1398,14 @@ header {
         }
       }
       &.highlight {
-        // &.me-too {
-        //   @include breakpoint(large-screen-up) {
-        //     .text {
-        //       background: $light-blue;
-        //       color: $black;
-        //     }
-        //   }
-        // }
+        &.me-too {
+          @include breakpoint(large-screen-up) {
+            .text {
+              background: $light-blue;
+              color: $black;
+            }
+          }
+        }
         @include breakpoint(large-screen-up) {
           width: 100%;
           border-left: none;
@@ -1475,9 +1475,15 @@ header {
       display: flex;
       flex-wrap: wrap;
       padding: 80px;
+      padding-top: 0;
     }
     @include breakpoint(extra-large-screen-up) {
       padding: 200px;
+    }
+    .column-1, .column-2, .column-3, .column-4 {
+      @include breakpoint(large-screen-up) {
+        width: 25%;
+      }
     }
     .shorts-grid-item {
       box-sizing: border-box;
@@ -1485,9 +1491,9 @@ header {
       @include breakpoint(large-screen-up) {
         margin: 0;
         padding: 0 32px 32px 0;
-        width: 25%;
+        // width: 25%;
         min-height: 200px;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
       }
       .rule {
         width: 100%;
@@ -1496,93 +1502,96 @@ header {
         margin-bottom: 8px;
       }
       .image {
+        margin-bottom: 8px;
         img {
           width: 100%;
         }
       }
-      &.image-text {
-        .image-text-container {
-          @include breakpoint(large-screen-up) {
-            // display: flex;
-          }
-          .image {
-            flex: 1;
-            max-width: 100px;
-            margin-bottom: 16px;
-            img {
-              width: 100%;
-              border-radius: 100%;
-            }
-          }
-          .text {
-            @include breakpoint(large-screen-up) {
-              flex: 2;
-              // padding-left: 16px;
-            }
-          }
-        }
-      }
-      &.full-width {
-        .rule {
-          max-width: 50px;
-        }
-        .image {
-          margin-bottom: 8px;
-          @include breakpoint(large-screen-up) {
-            width: 50%;
-            margin-bottom: 0;
-            padding-right: 32px;
-            // box-sizing: border-box;
-          }
-          img {
-            width: 100%;
-          }
-        }
-        .text {
-          @include breakpoint(large-screen-up) {
-            width: 50%;
-            // padding-left: 32px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-        }
-        @include breakpoint(large-screen-up) {
-          width: 100%;
-          display: flex;
-        }
-      }
-      &.small-image {
-        .image {
-          @include breakpoint(large-screen-up) {
-            width: 30%;
-          }
-        }
-        .text {
-          @include breakpoint(large-screen-up) {
-            width: 60%;
-          }
-        }
-      }
-      &:last-child {
-        margin-bottom: 0;
-        @include breakpoint(large-screen-up) {
-          margin-bottom: 48px;
-        }
-      } 
+      // &.image-text {
+      //   .image-text-container {
+      //     @include breakpoint(large-screen-up) {
+      //       // display: flex;
+      //     }
+      //     .image {
+      //       flex: 1;
+      //       max-width: 100px;
+      //       margin-bottom: 16px;
+      //       img {
+      //         width: 100%;
+      //         border-radius: 100%;
+      //       }
+      //     }
+      //     .text {
+      //       @include breakpoint(large-screen-up) {
+      //         flex: 2;
+      //         // padding-left: 16px;
+      //       }
+      //     }
+      //   }
+      // }
+    //   &.full-width {
+    //     .rule {
+    //       max-width: 50px;
+    //     }
+    //     .image {
+    //       margin-bottom: 8px;
+    //       @include breakpoint(large-screen-up) {
+    //         width: 50%;
+    //         margin-bottom: 0;
+    //         padding-right: 32px;
+    //         // box-sizing: border-box;
+    //       }
+    //       img {
+    //         width: 100%;
+    //       }
+    //     }
+    //     .text {
+    //       @include breakpoint(large-screen-up) {
+    //         width: 50%;
+    //         // padding-left: 32px;
+    //         box-sizing: border-box;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //       }
+    //     }
+    //     @include breakpoint(large-screen-up) {
+    //       width: 100%;
+    //       display: flex;
+    //     }
+    //   }
+    //   &.small-image {
+    //     .image {
+    //       @include breakpoint(large-screen-up) {
+    //         width: 30%;
+    //       }
+    //     }
+    //     .text {
+    //       @include breakpoint(large-screen-up) {
+    //         width: 60%;
+    //       }
+    //     }
+    //   }
+    //   &:last-child {
+    //     margin-bottom: 0;
+    //     @include breakpoint(large-screen-up) {
+    //       margin-bottom: 48px;
+    //     }
+    //   } 
     }
   }
 }
 
 .article-title {
   width: 100%;
+  max-width: 1400px;
 }
 
 .article-text {
   margin-top: 32px;
   @include breakpoint(large-screen-up) {
     display: flex;
+    max-width: 1000px;
   }
   .article-main {
     margin-bottom: 48px;
