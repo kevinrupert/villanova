@@ -466,6 +466,9 @@ header {
       @include breakpoint(large-screen-up) {
         margin-top: 2px;
         margin-left: 16px;
+        &.left {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -499,15 +502,15 @@ header {
       max-width: 1400px;
       padding: 24px 0;
       @include breakpoint(large-screen-up) {
-        // padding: 64px 0;
-        &.middle {
-          margin-top: 0;
-          // margin-bottom: 80px;
+        padding: 0;
+        margin-top: 80px;
+        &.mar-bot {
+          margin-bottom: 80px;
         }
       }
-      &.last {
-        padding-bottom: 0;
-      }
+      // &.last {
+      //   padding-bottom: 0;
+      // }
     }
     .inline-image {
       margin-top: 32px;
@@ -518,6 +521,12 @@ header {
         }
       }
       .caption {
+        &.inline {
+          @include breakpoint(large-screen-up) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
         .caption-image {
           height: 10px;
           display: flex;
@@ -537,6 +546,9 @@ header {
         }
       }
     }
+  }
+  &.silent-disco-section {
+    background: $black;
   }
   &.image-row {
     padding: 0;
@@ -677,11 +689,31 @@ header {
             width: 100%;
           }
         }
-        .text {
-          padding-top: 16px;
-          box-sizing: border-box;
-          max-width: 500px;
+        .caption {
+          &.inline {
+            @include breakpoint(large-screen-up) {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+          .caption-image {
+            height: 10px;
+            display: flex;
+            margin-right: 8px;
+            img {
+              height: 100%;
+              width: auto;
+            }
+          }
+          .text {
+            max-width: none;
+          }
         }
+        // .text {
+        //   padding-top: 16px;
+        //   box-sizing: border-box;
+        //   max-width: none;
+        // }
       }
     }
   }
@@ -847,29 +879,24 @@ header {
   }
 }
 
-.francis-twitter.aside {
+.francis-twitter {
   background: $cream;
   .side-column {
-    border-left: 1px solid $black;
+    border-left: none !important;
+    padding: 0 !important;
     @include breakpoint(large-screen-up) {
       margin-bottom: 80px;
-      width: 400px;
+      width: 500px !important;
       border-right: 1px solid $black;
       border-left: none;
       padding-right: 32px;
+      padding-left: 32px !important;
     }
-  }
-  .tweet {
-    margin-top: 24px;
-    .small {
-      color: $gray;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-    .tweet-text {
-      color: $blue;
-      font-size: 18px;
-      line-height: 32px;
+    .twitter-grid {
+      margin-top: -10px;
+      .tweet {
+        width: 100%;
+      }
     }
   }
 }
@@ -883,10 +910,11 @@ header {
       }
     }
   }
-  .title-2 {
-    margin-top: 48px;
-    @include breakpoint(large-screen-up) {
-      // margin-top: 80px;
+  .text {
+    .drop {
+      @include breakpoint(large-screen-up) {
+        font-size: 115px;
+      }
     }
   }
 }
@@ -1086,7 +1114,7 @@ header {
 
 .windows {
   @include breakpoint(large-screen-up) {
-    display: flex;
+    // display: flex;
   }
   .window-1, .window-2 {
     line-height: 0;
@@ -1095,7 +1123,14 @@ header {
     padding-top: 24px;
     @include breakpoint(large-screen-up) {
       padding-top: 0;
-      width: 50%;
+      // width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .container {
+        max-width: 900px;
+        position: relative;
+      }
     }
     .tooltip {
       background-color: rgba($white, 0.8);
@@ -1686,6 +1721,39 @@ header {
       .rule-2 {
         margin-top: 16px;
       }
+    }
+  }
+}
+
+.silent-disco-intro {
+  background: $black;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+    height: calc(100vh - 76px);
+  }
+  .intro-text {
+    background: $black;
+    color: $white;
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .intro-image {
+    line-height: 0;
+    background: $black;
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
     }
   }
 }
