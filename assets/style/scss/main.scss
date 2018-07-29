@@ -163,9 +163,18 @@ body {
     float: left;
     padding: 0 2px 0 0;
     @include breakpoint(large-screen-up) {
-      font-size: 110px;
-      line-height: 0.8;
+      font-size: 113px;
+      line-height: 0.75;
     }
+    &.j {
+      font-size: 99px;
+      margin-left: 20px;
+    }
+  }
+  a {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px solid $black;
   }
 }
 
@@ -182,14 +191,17 @@ body {
   font-size: 36px;
   line-height: 38px;
   @include breakpoint(large-screen-up) {
-    font-size: 64px;
-    line-height: 66px;
+    font-size: 50px;
+    line-height: 55px;
   }
   .hang {
     margin-left: -18px;
     @include breakpoint(large-screen-up) {
-      margin-left: -32px;
+      margin-left: -24px;
     }
+  }
+  &.center {
+    text-align: center;
   }
 }
 
@@ -230,7 +242,7 @@ body {
 }
 
 .subhead {
-  max-width: 400px;
+  max-width: 500px;
   font-size: 16px;
   line-height: 23px;
   @include breakpoint(large-screen-up) {
@@ -430,7 +442,7 @@ header {
 
 .caption {
   display: flex;
-  padding: 16px;
+  padding: 8px 16px 16px 16px;
   box-sizing: border-box;
   @include breakpoint(large-screen-up) {
     align-items: center;
@@ -487,6 +499,9 @@ header {
   &.last {
     margin-bottom: 0;
   }
+  &.campaign {
+    padding-top: 0;
+  }
   &.center {
     position: relative;
     @include breakpoint(large-screen-up) {
@@ -498,12 +513,56 @@ header {
     .text {
       max-width: 645px;
     }
+    .stats {
+      margin-top: 48px;
+      .large {
+        font-family: $chronicle;
+        letter-spacing: -2px;
+      }
+      .stat {
+        margin-top: 48px;
+      }
+      .number {
+        font-size: 64px;
+        letter-spacing: -2px;
+        @include breakpoint(large-screen-up) {
+          font-size: 76px;
+        }
+      }
+    }
+    // .inline-media {
+    //   width: 100%;
+    //   height: auto;
+    //   margin-bottom: 48px;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   .media {
+    //     width: 100%;
+    //     height: auto;
+    //     max-width: 1400px;
+    //     .youtube-wrapper {
+    //       height: 0;
+    //       overflow: hidden;
+    //       padding-bottom: 56.25%;
+    //       position: relative;
+    //       iframe {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         height: 100%;
+    //         width: 100%;
+    //       }
+    //     }
+    //   }
+    // }
     .pull-quote {
       max-width: 1400px;
       padding: 24px 0;
       @include breakpoint(large-screen-up) {
         padding: 0;
         margin-top: 80px;
+        max-width: 900px;
         &.mar-bot {
           margin-bottom: 80px;
         }
@@ -514,6 +573,14 @@ header {
     }
     .inline-image {
       margin-top: 32px;
+      &.fill {
+        .image {
+          max-width: none;
+        }
+      }
+      &.top {
+        margin-top: 0;
+      }
       .image {
         max-width: 645px;
         img {
@@ -559,10 +626,12 @@ header {
       }
       .image {
         @include breakpoint(large-screen-up) {
-          flex: 1;
+          width: 50%;
         }
         img {
           width: 100%;
+          height: auto;
+          line-height: 0;
         }
       }
     }
@@ -694,6 +763,7 @@ header {
             @include breakpoint(large-screen-up) {
               padding-left: 0;
               padding-right: 0;
+
             }
           }
           .caption-image {
@@ -1654,38 +1724,73 @@ header {
 .article-title {
   width: 100%;
   max-width: 1400px;
+  display: flex;
+  // justify-content: center;
+  .large {
+    max-width: 900px;
+  }
+  &.left {
+    max-width: 945px;
+    // justify-content: center;
+    .text-container {
+      // margin-bottom: 48px;
+      max-width: none;
+      @include breakpoint(large-screen-up) {
+        // width: 75%;
+        max-width: 645px;
+        padding-right: 32px;
+        box-sizing: border-box;
+      }
+    }
+    .inline-image {
+      .image {
+        max-width: none;
+      }
+    }
+  }
 }
 
 .article-text {
   margin-top: 32px;
   @include breakpoint(large-screen-up) {
     display: flex;
+    justify-content: center;
     max-width: 1000px;
+    &.left {
+      justify-content: flex-start;
+    }
+  }
+  &.top {
+    margin-top: 0;
   }
   .article-main {
     margin-bottom: 48px;
     @include breakpoint(large-screen-up) {
-      width: 75%;
+      max-width: 645px;
       padding-right: 32px;
       box-sizing: border-box;
+      margin-bottom: 0;
     }
     .title-1 {
       max-width: none;
     }
     .title-2 {
-      margin-top: 48px;
+      margin-top: 32px;
+      &.top {
+        margin-top: 0;
+      }
     }
     .stats {
       margin-top: 48px;
       .large {
         font-family: $chronicle;
+        letter-spacing: -2px;
       }
       .stat {
         margin-top: 48px;
       }
       .number {
         font-size: 64px;
-        font-weight: 600;
         letter-spacing: -2px;
         @include breakpoint(large-screen-up) {
           font-size: 76px;
@@ -1695,7 +1800,10 @@ header {
   }
   .article-aside {
     @include breakpoint(large-screen-up) {
-      width: 25%;
+      width: 300px;
+      &.father-peter {
+        width: 450px;
+      }
     }
     .article-aside-image {
       width: 100%;
@@ -1716,6 +1824,7 @@ header {
         font-size: 48px;
         @include breakpoint(large-screen-up) {
           font-size: 100px;
+          height: 40px;
         }
       }
       .rule-2 {
@@ -2033,6 +2142,223 @@ footer {
 .rotate {
   animation: rotation 100s infinite linear;
   -webkit-animation: rotation 100s infinite linear;
+}
+
+.campaign-intro {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  @include breakpoint(large-screen-up) {
+    height: calc(100vh - 76px);
+  }
+  @include breakpoint(extra-large-screen-up) {
+    height: 800px;
+  }
+  .shatter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150vh;
+    overflow-x: hidden;
+    @include breakpoint(extra-large-screen-up) {
+      height: 1200px;
+    }
+  }
+  .triangle {
+    position: absolute;
+    z-index: -1;
+    // max-width: 150px;
+    transform: scale(0.6);
+    @include breakpoint(large-screen-up) {
+      transform: scale(1);
+    }
+    &.t-1 {
+      top: 0;
+      left: -50px;
+      @include breakpoint(large-screen-up) {
+        top: 50px;
+        left: 0;
+      }
+    }
+    &.t-2 {
+      top: 50px;
+      left: -50px;
+      @include breakpoint(large-screen-up) {
+        top: 130px;
+        left: 0px;
+      }
+    }
+    &.t-3 {
+      top: 200px;
+      left: -100px;
+      @include breakpoint(large-screen-up){
+        left: 0;
+        top: 400px;
+      }
+    }
+    &.t-4 {
+      top: 0;
+      left: 50px;
+      @include breakpoint(large-screen-up) {
+        left: 200px;
+      }
+    }
+    &.t-5 {
+      top: 40px;
+      left: 10px;
+      @include breakpoint(large-screen-up) {
+        left: 200px;
+      }
+    }
+    &.t-6 {
+      top: 280px;
+      left: -50px;
+      @include breakpoint(large-screen-up) {
+        left: 200px;
+        top: 400px;
+      }
+    }
+    &.t-7 {
+      top: 300px;
+      left: -100px;
+      z-index: 1;
+      @include breakpoint(large-screen-up) {
+        left: 100px;
+      }
+    }
+    &.t-8 {
+      top: 350px;
+      left: 10px;
+      @include breakpoint(large-screen-up) {
+        left: 100px;
+        top: 500px;
+      }
+    }
+    &.t-9 {
+      top: 100px;
+      left: 30px;
+      @include breakpoint(large-screen-up) {
+        left: 400px;
+      }
+    }
+    &.t-10 {
+      top: 150px;
+      left: 100px;
+      @include breakpoint(large-screen-up) {
+        left: 400px;
+      }
+    }
+    &.t-11 {
+      top: 350px;
+      left: 100px;
+      @include breakpoint(large-screen-up) {
+        left: 400px;
+        top: 600px;
+      }
+    }
+    &.t-12 {
+      top: 0;
+      right: 50px;
+      @include breakpoint(large-screen-up) {
+        right: 200px;
+      }
+    }
+    &.t-13 {
+      top: 100px;
+      right: 50px;
+      @include breakpoint(large-screen-up) {
+        right: 400px;
+      }
+    }
+    &.t-14 {
+      top: 300px;
+      right: 20px;
+      @include breakpoint(large-screen-up) {
+        right: 200px;
+        top: 500px;
+      }
+    }
+    &.t-15 {
+      top: 300px;
+      right: -100px;
+      @include breakpoint(large-screen-up) {
+        right: 100px;
+      }
+    }
+    &.t-16 {
+      top: 200px;
+      right: -100px;
+      @include breakpoint(large-screen-up) {
+        right: 200px;
+      }
+    }
+    &.t-17 {
+      top: 0px;
+      right: -100px;
+      @include breakpoint(large-screen-up) {
+        right: 100px;
+        top: 50px;
+      }
+    }
+    &.t-18 {
+      top: 50px;
+      right: -100px;
+      @include breakpoint(large-screen-up) {
+        top: 100px;
+      }
+    }
+    &.t-19 {
+      top: 400px;
+      right: 50px;
+      @include breakpoint(large-screen-up) {
+        right: 200px;
+        top: 350px;
+      }
+    }
+    &.t-20 {
+      top: 400px;
+      right: -50px;
+      @include breakpoint(large-screen-up) {
+        right: 0;
+        top: 500px;
+      }
+    }
+  }
+}
+
+.campaign-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+  @include breakpoint(large-screen-up) {
+    padding: 0 0 80px 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 1000px;
+  }
+  .video {
+    .video-wrapper {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 
