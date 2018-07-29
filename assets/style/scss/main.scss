@@ -1926,20 +1926,26 @@ header {
           padding: 0 48px 48px 48px;
           box-sizing: border-box;
         }
-        &:last-child {
-          margin-bottom: 0;
-          padding-bottom: 0;
-        }
+        // &:last-child {
+        //   margin-bottom: 0;
+        //   padding-bottom: 0;
+        // }
         .title-3 {
           color: $blue;
+        }
+        .regular {
+          max-width: 645px;
         }
       }
       .highlight {
         @include breakpoint(large-screen-up) {
           display: flex;
           flex-direction: row-reverse;
-          padding: 0 48px;
+          padding: 0 48px 48px 48px;
           box-sizing: border-box;
+          &.last {
+            padding-bottom: 0;
+          }
         }
         .rule-1 {
           background-color: $blue;
@@ -1947,7 +1953,7 @@ header {
         }
         .text {
           color: $blue;
-          margin-bottom: 24px;
+          margin-bottom: 32px;
           @include breakpoint(large-screen-up) {
             width: 50%;
             padding-left: 32px;
@@ -1993,7 +1999,7 @@ header {
     }
     .title-2 {
       @include breakpoint(large-screen-up) {
-        margin: 24px;
+        margin: 16px;
       }
     }
     .grid {
@@ -2006,9 +2012,9 @@ header {
         // max-width: 200px;
         margin-bottom: 24px;
         @include breakpoint(large-screen-up) {
-          padding: 24px;
+          padding: 16px;
           box-sizing: border-box;
-          width: 25%;
+          width: 20%;
           max-width: none;
           margin-bottom: 0;
         }
