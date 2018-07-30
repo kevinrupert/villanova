@@ -209,6 +209,11 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: $apex;
+  a {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px solid $black;
+  }
   @include breakpoint(large-screen-up) {
     font-size: 16px;
     line-height: 23px;
@@ -468,6 +473,10 @@ header {
     }
     .sans {
       line-height: 14px;
+      &.max {
+        max-width: 800px;
+        line-height: 16px;
+      }
     }
     .photo {
       text-transform: uppercase;
@@ -501,6 +510,9 @@ header {
   }
   &.campaign {
     padding-top: 0;
+  }
+  &.mars-alumni {
+    background: $light-blue;
   }
   &.center {
     position: relative;
@@ -716,6 +728,11 @@ header {
       @include breakpoint(extra-large-screen-up) {
         margin-right: 100px;
       }
+      .side-column-image {
+        img {
+          width: 100%;
+        }
+      }
     }
     &.reverse {
       flex-direction: row;
@@ -856,7 +873,7 @@ header {
         // color: $red; 
         padding-right: 4px;
         @include breakpoint(large-screen-up) {
-          font-size: 124px;
+          font-size: 128px;
         }
       }
       .title-container {
@@ -866,44 +883,6 @@ header {
             margin-top: 48px;
           }
         }
-      }
-    }
-  }
-}
-
-.mars-alumni {
-  background: $light-blue;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  @include breakpoint(large-screen-up) {
-    padding-bottom: 120px;
-  }
-  .intro-text {
-    max-width: 645px;
-    @include breakpoint(large-screen-up) {
-      // margin: 48px 0;
-    }
-    .drop {
-      padding-top: 22px;
-      @include breakpoint(large-screen-up) {
-        padding-top: 24px;
-      }
-    }
-  }
-  .alumni-grid {
-    @include breakpoint(large-screen-up) {
-      display: flex;
-      margin-top: 48px;
-    }
-    .alumni {
-      margin-top: 32px;
-      border-left: 1px solid $black;
-      padding-left: 32px;
-      @include breakpoint(large-screen-up) {
-        padding: 0 32px;
-        box-sizing: border-box;
       }
     }
   }
@@ -1249,6 +1228,8 @@ header {
       // max-width: 200px;
       @include breakpoint(large-screen-up) {
         padding-top: 40px;
+        font-size: 18px;
+        line-height: 20px;
         // max-width: 300px;
       }
     }
@@ -1335,6 +1316,10 @@ header {
     .tip-11 {
       left: 12%;
       top: 80%;
+    }
+    .tip-12 {
+      left: 70%;
+      top: 50%;
     }
   }
 }

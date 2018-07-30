@@ -205,6 +205,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: "apex", "Helvetica", "Roboto", "Arial", sans-serif; }
+  .sans a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000000; }
   @media (min-width: 1000px) {
     .sans {
       font-size: 16px;
@@ -426,6 +430,9 @@ header {
       justify-content: space-between; } }
   .caption .text .sans {
     line-height: 14px; }
+    .caption .text .sans.max {
+      max-width: 800px;
+      line-height: 16px; }
   .caption .text .photo {
     text-transform: uppercase;
     color: #8E8B86;
@@ -451,6 +458,8 @@ header {
     margin-bottom: 0; }
   .section.campaign {
     padding-top: 0; }
+  .section.mars-alumni {
+    background: #E1F2FC; }
   .section.center {
     position: relative; }
     @media (min-width: 1000px) {
@@ -578,6 +587,8 @@ header {
     @media (min-width: 1600px) {
       .section.aside .side-column {
         margin-right: 100px; } }
+    .section.aside .side-column .side-column-image img {
+      width: 100%; }
   .section.aside.reverse {
     flex-direction: row; }
     .section.aside.reverse .side-column {
@@ -684,41 +695,12 @@ header {
         padding-right: 4px; }
         @media (min-width: 1000px) {
           .mars-intro .text-container .text .drop-1 {
-            font-size: 124px; } }
+            font-size: 128px; } }
       .mars-intro .text-container .text .title-container {
         margin-bottom: 48px; }
         @media (min-width: 1000px) {
           .mars-intro .text-container .text .title-container .subhead {
             margin-top: 48px; } }
-
-.mars-alumni {
-  background: #E1F2FC;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-  @media (min-width: 1000px) {
-    .mars-alumni {
-      padding-bottom: 120px; } }
-  .mars-alumni .intro-text {
-    max-width: 645px; }
-    .mars-alumni .intro-text .drop {
-      padding-top: 22px; }
-      @media (min-width: 1000px) {
-        .mars-alumni .intro-text .drop {
-          padding-top: 24px; } }
-  @media (min-width: 1000px) {
-    .mars-alumni .alumni-grid {
-      display: flex;
-      margin-top: 48px; } }
-  .mars-alumni .alumni-grid .alumni {
-    margin-top: 32px;
-    border-left: 1px solid #000000;
-    padding-left: 32px; }
-    @media (min-width: 1000px) {
-      .mars-alumni .alumni-grid .alumni {
-        padding: 0 32px;
-        box-sizing: border-box; } }
 
 .francis-intro {
   background-color: #000000;
@@ -980,7 +962,9 @@ header {
     text-align: center; }
     @media (min-width: 1000px) {
       .windows .window-1 .title-3, .windows .window-2 .title-3 {
-        padding-top: 40px; } }
+        padding-top: 40px;
+        font-size: 18px;
+        line-height: 20px; } }
   .windows .window-1 img, .windows .window-2 img {
     width: 100%;
     line-height: 0; }
@@ -1041,6 +1025,9 @@ header {
 .windows .window-2 .tip-11 {
   left: 12%;
   top: 80%; }
+.windows .window-2 .tip-12 {
+  left: 70%;
+  top: 50%; }
 
 .art-new-light {
   background: #000000;
