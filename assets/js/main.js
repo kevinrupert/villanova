@@ -18,5 +18,5 @@ $('.dean-gabriele-intro').waypoint(function (direction) {
         $('.dean-gabriele-image').removeClass('stick');
     }
 }, {offset: '0px' });
-  
+
   

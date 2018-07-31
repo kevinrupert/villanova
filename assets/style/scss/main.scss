@@ -349,7 +349,7 @@ header {
     li {
       opacity: 0;
       padding: 24px;
-      box-sixing: border-box;
+      box-sizing: border-box;
       transition: opacity 0.3s ease-in;
       font-size: 13px;
       line-height: 13px;
@@ -368,16 +368,23 @@ header {
       }
       a {
         color: $white;
-        transition: all 0.3s ease;
-        display: inline-block;
+        transition: all 0.5s ease;
+        display: block;
+        height: 100%;
         width: 100%;
         text-decoration: none;
-        &:hover {
-          color: $black;
-        }
         @include breakpoint(large-screen-up) {
+          transition: all 0.5s ease;
           margin-top: 2px;
           color: $black;
+          padding-bottom: 4px;
+          transform: translateY(4px);
+          border-bottom: 3px solid transparent;
+          &:hover {
+            // border-bottom: 3px solid $blue;
+            transition: all 0.5s ease;
+            color: $blue;
+          }
         }
       }
     }
@@ -431,6 +438,9 @@ header {
 
 .top {
   margin-top: 76px;
+  &.class-notes-title {
+    margin-top: 124px;
+  }
 }
 
 .rule-1 {
@@ -450,13 +460,14 @@ header {
   padding: 8px 16px 16px 16px;
   box-sizing: border-box;
   @include breakpoint(large-screen-up) {
-    align-items: center;
+    // align-items: center;
     width: 100%;
   }
   .image {
     height: 10px;
     width: 10px;
     margin-right: 8px;
+    margin-top: 4px;
     img {
       height: 100%;
       width: auto;
@@ -465,7 +476,7 @@ header {
   .text {
     @include breakpoint(large-screen-up) {
       display: flex;
-      align-items: center;
+      // align-items: center;
       padding-top: 4px;
       box-sizing: border-box;
       width: 100%;
@@ -610,6 +621,7 @@ header {
           height: 10px;
           display: flex;
           margin-right: 8px;
+          margin-top: 4px;
           img {
             height: 100%;
             width: auto;
@@ -675,6 +687,7 @@ header {
         // width: 10px;
         display: flex;
         margin-right: 8px;
+        margin-top: 4px;
         img {
           height: 100%;
         }
@@ -787,6 +800,7 @@ header {
             height: 10px;
             display: flex;
             margin-right: 8px;
+            margin-top: 4px;
             img {
               height: 100%;
               width: auto;
@@ -1489,6 +1503,9 @@ header {
         justify-content: center;
         overflow: hidden;
         margin-bottom: 32px;
+        @include breakpoint(medium-screen-up) {
+          height: 300px;
+        }
         @include breakpoint(large-screen-up) {
           height: 250px;
         }
@@ -1571,6 +1588,40 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+.going-nova {
+  padding: 32px;
+  box-sizing: border-box;
+  @include breakpoint(large-screen-up) {
+    padding: 80px;
+  }
+  .going-nova-title {
+    @include breakpoint(large-screen-up) {
+      padding-bottom: 80px;
+      box-sizing: border-box;
+    }
+  }
+  .instagram-grid {
+    @include breakpoint(large-screen-up) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .column-1, .column-2, .column-3 {
+      @include breakpoint(large-screen-up) {
+        width: 33.333%;
+        // padding: 16px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .instagram {
+    width: 100%;
+    @include breakpoint(large-screen-up) {
+      padding: 16px;
+      box-sizing: border-box;
     }
   }
 }
@@ -1790,7 +1841,7 @@ header {
     @include breakpoint(large-screen-up) {
       width: 300px;
       &.father-peter {
-        width: 450px;
+        width: 600px;
       }
     }
     .article-aside-image {
@@ -2010,6 +2061,55 @@ header {
           max-width: none;
           margin-bottom: 0;
         }
+      }
+    }
+  }
+}
+
+.class-notes-nav {
+  width: 100vw;
+  left: 0;
+  top: 76px;
+  z-index: 20;
+  position: fixed;
+  height: 48px;
+  background: $black;
+  color: $white;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  @include breakpoint(large-screen-up) {
+    z-index: 60;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      // justify-content: center;
+    }
+    li {
+      padding-right: 24px;
+      box-sizing: border-box;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      @include breakpoint(large-screen-up) {
+        // &:first-child {
+        //   padding-left: 24px;
+        // }
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        font-family: $apex;
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
       }
     }
   }
