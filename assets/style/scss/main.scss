@@ -1216,8 +1216,8 @@ header {
       line-height: 12px;
       transition: all 0.3s ease;
       @include breakpoint(large-screen-up) {
-        // width: 48px;
-        // height: 48px;
+        width: 42px;
+        height: 42px;
         &:hover {
           cursor: pointer;
           transform: scale(1.1);
@@ -1256,18 +1256,30 @@ header {
     .tip-1 {
       left: 30%;
       top: 20%;
+      @include breakpoint(large-screen-up) {
+        left: 40%;
+      }
     }
     .tip-2 {
       left: 10%;
-      top: 40%;
+      top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 20%;
+      }
     }
     .tip-3 {
       left: 30%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 40%;
+      }
     }
     .tip-4 {
       left: 50%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 60%;
+      }
     }
     .tip-5 {
       left: 70%;
@@ -1285,27 +1297,46 @@ header {
       left: 20%;
       top: 70%;
     }
+    .tip-9 {
+      left: 30%;
+      top: 70%;
+    }
   }
   .window-2 {
     .tip-1 {
       left: 30%;
       top: 20%;
+      @include breakpoint(large-screen-up) {
+        left: 40%;
+      }
     }
     .tip-2 {
       left: 10%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 20%;
+      }
     }
     .tip-3 {
       left: 30%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 40%;
+      }
     }
     .tip-4 {
       left: 50%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 60%;
+      }
     }
     .tip-5 {
       left: 70%;
       top: 32%;
+      @include breakpoint(large-screen-up) {
+        left: 80%;
+      }
     }
     .tip-6 {
       left: 40%;
@@ -1314,6 +1345,10 @@ header {
     .tip-7 {
       left: 50%;
       top: 55%;
+      @include breakpoint(large-screen-up) {
+        left: 60%;
+        top: 60%;
+      }
     }
     .tip-8 {
       left: 80%;
@@ -1330,6 +1365,10 @@ header {
     .tip-11 {
       left: 12%;
       top: 80%;
+      @include breakpoint(large-screen-up) {
+        left: 18%;
+        top: 82%;
+      }
     }
     .tip-12 {
       left: 70%;
@@ -1498,6 +1537,7 @@ header {
       }
       .image {
         height: 160px;
+        min-height: 50vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1505,6 +1545,7 @@ header {
         margin-bottom: 32px;
         @include breakpoint(medium-screen-up) {
           height: 300px;
+          min-height: initial;
         }
         @include breakpoint(large-screen-up) {
           height: 250px;
@@ -2111,6 +2152,47 @@ header {
         line-height: 16px;
         display: block;
       }
+    }
+  }
+}
+
+.next-up {
+  padding: 32px;
+  box-sizing: border-box;
+  background: $cream;
+  &.white {
+    background: $white;
+  }
+  @include breakpoint(large-screen-up) {
+    padding: 80px;
+  }
+  .title {
+    text-transform: uppercase;
+  }
+  .text-container {
+    max-width: 645px;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    height: 56px;
+    max-width: 200px;
+    box-sizing: border-box;
+    border: 1px solid $black;
+    text-decoration: none;
+    color: $black;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: $apex;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    &:hover {
+      background: $black;
+      color: $cream;
     }
   }
 }
