@@ -11,12 +11,12 @@ $('.animate-fade, .animate-fade-up').waypoint(function() {
   $(this.element).addClass('animated');
 }, {offset: '90%' });
 
-$('.dean-gabriele-intro').waypoint(function (direction) {
+$('.dean-gabriele-text').waypoint(function (direction) {
     if (direction == 'down') {
-        $('.dean-gabriele-image').addClass('stick');
+        $('.dean-gabriele-image-desktop').addClass('bottom');
     } else {
-        $('.dean-gabriele-image').removeClass('stick');
+        $('.dean-gabriele-image-desktop').removeClass('bottom');
     }
-}, {offset: '0px' });
+}, {offset: 'bottom-in-view' });
 
   

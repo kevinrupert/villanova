@@ -827,21 +827,39 @@ header {
     .service-outro {
       display: flex;
       flex-direction: row; } }
+  .service-outro .video {
+    margin-top: 24px; }
+    .service-outro .video .video-wrapper {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative; }
+      .service-outro .video .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%; }
+  .service-outro .caption {
+    padding-left: 0; }
+  .service-outro .caption-image {
+    margin-top: 0; }
   @media (min-width: 1000px) {
-    .service-outro .text {
+    .service-outro .service-text {
       width: 50%;
       padding: 32px;
       box-sizing: border-box; } }
-  .service-outro .text:nth-child(2) {
+  .service-outro .service-text:nth-child(2) {
     margin-top: 80px; }
     @media (min-width: 1000px) {
-      .service-outro .text:nth-child(2) {
+      .service-outro .service-text:nth-child(2) {
         margin-top: 0; } }
 
 @media (min-width: 1000px) {
   .dean-gabriele-intro {
     display: flex;
-    height: 100vh; } }
+    height: calc(100vh - 76px); } }
 .dean-gabriele-intro .text {
   padding: 32px;
   box-sizing: border-box;
@@ -858,22 +876,38 @@ header {
       padding-right: 0; } }
   .dean-gabriele-intro .text .text-container {
     max-width: 700px; }
-@media (min-width: 1000px) {
-  .dean-gabriele-intro .dean-gabriele-image {
-    height: 100vh;
-    width: 50%;
-    overflow: hidden;
-    margin-top: 76px; }
-    .dean-gabriele-intro .dean-gabriele-image.stick {
-      position: fixed;
-      top: 0;
-      right: 0; } }
-.dean-gabriele-intro .dean-gabriele-image img {
+.dean-gabriele-intro .dean-gabriele-image-mobile img {
   width: 100%; }
+@media (min-width: 1000px) {
+  .dean-gabriele-intro .dean-gabriele-image-mobile {
+    display: none; } }
+
+.gabriele-container {
+  position: relative; }
+
+.dean-gabriele-image-desktop {
+  display: none; }
   @media (min-width: 1000px) {
-    .dean-gabriele-intro .dean-gabriele-image img {
-      object-fit: cover;
-      min-height: 100%; } }
+    .dean-gabriele-image-desktop {
+      display: inherit;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      padding-top: 76px;
+      box-sizing: border-box;
+      margin-left: 50%;
+      width: 50%;
+      overflow: hidden; } }
+  .dean-gabriele-image-desktop.bottom {
+    position: absolute;
+    bottom: 0; }
+  .dean-gabriele-image-desktop img {
+    width: 100%; }
+    @media (min-width: 1000px) {
+      .dean-gabriele-image-desktop img {
+        object-fit: cover;
+        min-height: 100%; } }
 
 @media (min-width: 1000px) {
   .dean-gabriele-text {

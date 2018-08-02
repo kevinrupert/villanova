@@ -273,8 +273,6 @@ header {
   }
   .logo {
     position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
     left: 32px;
     top: 28px;
     transition: all 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
@@ -381,7 +379,6 @@ header {
           transform: translateY(4px);
           border-bottom: 3px solid transparent;
           &:hover {
-            // border-bottom: 3px solid $blue;
             transition: all 0.5s ease;
             color: $blue;
           }
@@ -460,7 +457,6 @@ header {
   padding: 8px 16px 16px 16px;
   box-sizing: border-box;
   @include breakpoint(large-screen-up) {
-    // align-items: center;
     width: 100%;
   }
   .image {
@@ -511,7 +507,6 @@ header {
   box-sizing: border-box;
   @include breakpoint(large-screen-up) {
     padding: 80px;
-    // margin: 64px 0;
   }
   &.middle {
     padding-top: 0;
@@ -553,32 +548,6 @@ header {
         }
       }
     }
-    // .inline-media {
-    //   width: 100%;
-    //   height: auto;
-    //   margin-bottom: 48px;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   .media {
-    //     width: 100%;
-    //     height: auto;
-    //     max-width: 1400px;
-    //     .youtube-wrapper {
-    //       height: 0;
-    //       overflow: hidden;
-    //       padding-bottom: 56.25%;
-    //       position: relative;
-    //       iframe {
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         height: 100%;
-    //         width: 100%;
-    //       }
-    //     }
-    //   }
-    // }
     .pull-quote {
       max-width: 1400px;
       padding: 24px 0;
@@ -590,9 +559,6 @@ header {
           margin-bottom: 80px;
         }
       }
-      // &.last {
-      //   padding-bottom: 0;
-      // }
     }
     .inline-image {
       margin-top: 32px;
@@ -670,17 +636,6 @@ header {
         line-height: 0;
       }
     }
-    // .text {
-    //   padding: 16px;
-    //   box-sizing: border-box;
-    //   @include breakpoint(large-screen-up) {
-    //     width: 600px;
-    //     display: flex;
-    //     img {
-    //       margin-right: 16px;
-    //     }
-    //   }
-    // }
     .caption {
       .caption-image {
         height: 10px;
@@ -701,7 +656,6 @@ header {
     padding: 0;
     @include breakpoint(large-screen-up) {
       display: flex;
-      // align-items: flex-end;
     }
     .image {
       flex: 2;
@@ -810,11 +764,6 @@ header {
             max-width: none;
           }
         }
-        // .text {
-        //   padding-top: 16px;
-        //   box-sizing: border-box;
-        //   max-width: none;
-        // }
       }
     }
   }
@@ -838,11 +787,6 @@ header {
       align-items: center;
       justify-content: center;
     }
-    // @include breakpoint(extra-large-screen-up) {
-    //   background-repeat: repeat-x;
-    //   background-position: top left;
-    //   background-size: auto 100%;
-    // }
     .gradient {
       background: $mars-overlay;
       bottom: 0;
@@ -884,7 +828,6 @@ header {
         margin-top: -70vh;
       }
       .drop-1 {
-        // color: $red; 
         padding-right: 4px;
         @include breakpoint(large-screen-up) {
           font-size: 128px;
@@ -999,7 +942,6 @@ header {
     box-sizing: border-box;
     z-index: 10;
     position: relative;
-    // padding-top: 100px;
     @include breakpoint(large-screen-up) {
       position: absolute;
       height: 100%;
@@ -1043,17 +985,36 @@ header {
   }
 }
 
-.service-1 {
-  // background: $yellow;
-}
-
 .service-outro {
   background: $yellow;
   @include breakpoint(large-screen-up) {
     display: flex;
     flex-direction: row;
   }
-  .text {
+  .video {
+    margin-top: 24px;
+    .video-wrapper {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .caption {
+    padding-left: 0;
+  }
+  .caption-image {
+    margin-top: 0;
+  }
+  .service-text {
     @include breakpoint(large-screen-up) {
       width: 50%;
       padding: 32px;
@@ -1071,7 +1032,7 @@ header {
 .dean-gabriele-intro {
   @include breakpoint(large-screen-up) {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 76px);
   }
   .text {
     padding: 32px;
@@ -1092,24 +1053,43 @@ header {
       max-width: 700px;
     }
   }
-  .dean-gabriele-image {
-    @include breakpoint(large-screen-up) {
-      height: 100vh;
-      width: 50%;
-      overflow: hidden;
-      margin-top: 76px;
-      &.stick {
-        position: fixed;
-        top: 0;
-        right: 0;
-      }
-    }
+  .dean-gabriele-image-mobile {
     img {
       width: 100%;
-      @include breakpoint(large-screen-up) {
-        object-fit: cover;
-        min-height: 100%;
-      }
+    }
+    @include breakpoint(large-screen-up) {
+      display: none;
+    }
+  }
+}
+
+.gabriele-container {
+  position: relative;
+}
+
+.dean-gabriele-image-desktop {
+  display: none;
+  @include breakpoint(large-screen-up) {
+    display: inherit;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    padding-top: 76px;
+    box-sizing: border-box;
+    margin-left: 50%;
+    width: 50%;
+    overflow: hidden;
+  }
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  img {
+    width: 100%;
+    @include breakpoint(large-screen-up) {
+      object-fit: cover;
+      min-height: 100%;
     }
   }
 }
@@ -1127,12 +1107,6 @@ header {
   .pull-quote {
     max-width: 1400px;
     padding: 24px 0;
-    @include breakpoint(large-screen-up) {
-      // padding: 64px 0;
-      &.middle {
-        // margin-bottom: 80px;
-      }
-    }
     &.last {
       padding-bottom: 0;
     }
@@ -1179,9 +1153,6 @@ header {
 }
 
 .windows {
-  @include breakpoint(large-screen-up) {
-    // display: flex;
-  }
   .window-1, .window-2 {
     line-height: 0;
     position: relative;
@@ -1189,7 +1160,6 @@ header {
     padding-top: 24px;
     @include breakpoint(large-screen-up) {
       padding-top: 0;
-      // width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1239,12 +1209,10 @@ header {
       font-family: $apex;
       text-transform: uppercase;
       text-align: center;
-      // max-width: 200px;
       @include breakpoint(large-screen-up) {
         padding-top: 40px;
         font-size: 18px;
         line-height: 20px;
-        // max-width: 300px;
       }
     }
     img {
@@ -1516,9 +1484,6 @@ header {
           padding-right: 0;
         }
       }
-      @include breakpoint(extra-large-screen-up) {
-        // width: 25%;
-      }
       &:last-child {
         margin-bottom: 0;
         @include breakpoint(large-screen-up) {
@@ -1584,7 +1549,6 @@ header {
           width: 100%;
           border-left: none;
           padding: 0;
-          // padding-right: 24px;
           height: 500px;
           a {
             display: flex;
@@ -1592,10 +1556,6 @@ header {
             align-items: center;
             height: 500px;
           }
-          // .container {
-          //   width: 60%;
-          //   height: 500px;
-          // }
           .image {
             width: 60%;
             height: 500px;
@@ -1617,15 +1577,6 @@ header {
             flex-direction: column;
             justify-content: center;
             color: $white;
-            // .sans {
-            //   font-size: 18px;
-            //   margin-top: 0;
-            // }
-            // .title-2 {
-            //   font-size: 48px;
-            //   line-height: 48px;
-            //   font-family: $playfair;
-            // }
           }
         }
       }
@@ -1653,7 +1604,6 @@ header {
     .column-1, .column-2, .column-3 {
       @include breakpoint(large-screen-up) {
         width: 33.333%;
-        // padding: 16px;
         box-sizing: border-box;
       }
     }
@@ -1710,9 +1660,7 @@ header {
       @include breakpoint(large-screen-up) {
         margin: 0;
         padding: 0 32px 32px 0;
-        // width: 25%;
         min-height: 200px;
-        // margin-bottom: 48px;
       }
       .rule {
         width: 100%;
@@ -1726,77 +1674,6 @@ header {
           width: 100%;
         }
       }
-      // &.image-text {
-      //   .image-text-container {
-      //     @include breakpoint(large-screen-up) {
-      //       // display: flex;
-      //     }
-      //     .image {
-      //       flex: 1;
-      //       max-width: 100px;
-      //       margin-bottom: 16px;
-      //       img {
-      //         width: 100%;
-      //         border-radius: 100%;
-      //       }
-      //     }
-      //     .text {
-      //       @include breakpoint(large-screen-up) {
-      //         flex: 2;
-      //         // padding-left: 16px;
-      //       }
-      //     }
-      //   }
-      // }
-    //   &.full-width {
-    //     .rule {
-    //       max-width: 50px;
-    //     }
-    //     .image {
-    //       margin-bottom: 8px;
-    //       @include breakpoint(large-screen-up) {
-    //         width: 50%;
-    //         margin-bottom: 0;
-    //         padding-right: 32px;
-    //         // box-sizing: border-box;
-    //       }
-    //       img {
-    //         width: 100%;
-    //       }
-    //     }
-    //     .text {
-    //       @include breakpoint(large-screen-up) {
-    //         width: 50%;
-    //         // padding-left: 32px;
-    //         box-sizing: border-box;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: center;
-    //       }
-    //     }
-    //     @include breakpoint(large-screen-up) {
-    //       width: 100%;
-    //       display: flex;
-    //     }
-    //   }
-    //   &.small-image {
-    //     .image {
-    //       @include breakpoint(large-screen-up) {
-    //         width: 30%;
-    //       }
-    //     }
-    //     .text {
-    //       @include breakpoint(large-screen-up) {
-    //         width: 60%;
-    //       }
-    //     }
-    //   }
-    //   &:last-child {
-    //     margin-bottom: 0;
-    //     @include breakpoint(large-screen-up) {
-    //       margin-bottom: 48px;
-    //     }
-    //   } 
     }
   }
 }
@@ -1805,18 +1682,14 @@ header {
   width: 100%;
   max-width: 1400px;
   display: flex;
-  // justify-content: center;
   .large {
     max-width: 900px;
   }
   &.left {
     max-width: 945px;
-    // justify-content: center;
     .text-container {
-      // margin-bottom: 48px;
       max-width: none;
       @include breakpoint(large-screen-up) {
-        // width: 75%;
         max-width: 645px;
         padding-right: 32px;
         box-sizing: border-box;
@@ -1967,14 +1840,10 @@ header {
       border-left: none;
       padding: 0 32px 0 48px;
     }
-    &:last-child {
-      // margin-bottom: 0;
-    }
     &.first {
       padding-top: 0;
     }
     .decade-title {
-      // border-bottom: 1px solid $black;
       padding-bottom: 24px;
       margin-bottom: 24px;
       box-sizing: border-box;
@@ -2007,10 +1876,6 @@ header {
           box-sizing: border-box;
           margin-bottom: 0;
         }
-        // &:last-child {
-        //   margin-bottom: 0;
-        //   padding-bottom: 0;
-        // }
         .title-3 {
           color: $blue;
         }
@@ -2066,8 +1931,6 @@ header {
     margin-bottom: 48px;
     @include breakpoint(large-screen-up) {
       padding-left: 80px;
-      // padding: 100px 0;
-      // margin-bottom: 80px;
     }
   }
   .decade {
@@ -2075,7 +1938,6 @@ header {
     box-sizing: border-box;
     border-left: 1px solid $black;
     @include breakpoint(large-screen-up) {
-      // margin-bottom: 160px;
       margin-left: 80px;
     }
     &.first {
@@ -2093,7 +1955,6 @@ header {
         max-width: 1200px;
       }
       .grid-item {
-        // max-width: 200px;
         margin-bottom: 24px;
         @include breakpoint(large-screen-up) {
           padding: 16px;
@@ -2130,20 +1991,12 @@ header {
     align-items: center;
     padding: 0 32px;
     box-sizing: border-box;
-    @include breakpoint(large-screen-up) {
-      // justify-content: center;
-    }
     li {
       padding-right: 24px;
       box-sizing: border-box;
       height: 20px;
       display: flex;
       align-items: center;
-      @include breakpoint(large-screen-up) {
-        // &:first-child {
-        //   padding-left: 24px;
-        // }
-      }
       a {
         color: $white;
         text-decoration: none;
