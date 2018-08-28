@@ -828,6 +828,7 @@ header {
         justify-content: center;
         align-items: center;
         width: 100%;
+        right: 0;
         padding-top: 0; } }
     .service-intro .text .all {
       font-size: 200px; }
@@ -1284,7 +1285,7 @@ header {
       @media (min-width: 700px) {
         .story-grid .grid-container .grid-item .image {
           height: 300px;
-          min-height: initial; } }
+          min-height: auto; } }
       @media (min-width: 1000px) {
         .story-grid .grid-container .grid-item .image {
           height: 250px; } }
@@ -1785,6 +1786,12 @@ footer {
     @media (min-width: 1000px) {
       footer .contact .mail {
         max-width: 450px; } }
+    footer .contact .mail a {
+      border-bottom: 1px solid #ffffff;
+      box-sizing: border-box;
+      line-height: 16px; }
+    footer .contact .mail p {
+      line-height: 23px; }
   @media (min-width: 1000px) {
     footer .social {
       display: flex;
@@ -2115,5 +2122,39 @@ footer {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@media screen and (-ms-high-contrast: active) and (min-width: 1000px), screen and (-ms-high-contrast: none) and (min-width: 1000px) {
+  .francis-intro .text {
+    right: 0; } }
+@media screen and (-ms-high-contrast: active) and (min-width: 1000px), screen and (-ms-high-contrast: none) and (min-width: 1000px) {
+  .francis-intro .image img {
+    min-height: auto; } }
+
+@media screen and (-ms-high-contrast: active) and (min-width: 1000px), screen and (-ms-high-contrast: none) and (min-width: 1000px) {
+  .dean-gabriele-image-desktop img {
+    min-height: auto;
+    height: 100%;
+    width: auto; } }
+
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), screen and (-ms-high-contrast: none) and (min-width: 700px) {
+  .story-grid .grid-container .grid-item .image {
+    max-height: 250px;
+    min-height: auto; } }
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .story-grid .grid-container .grid-item .image img {
+    width: 100%;
+    min-height: auto; } }
+@media screen and (-ms-high-contrast: active) and (min-width: 1000px), screen and (-ms-high-contrast: none) and (min-width: 1000px) {
+  .story-grid .grid-container .grid-item.highlight .image {
+    width: 60vw;
+    height: 500px;
+    background: #E1F2FC;
+    margin-bottom: 0;
+    justify-content: center;
+    min-height: 500px;
+    max-height: auto; }
+    .story-grid .grid-container .grid-item.highlight .image img {
+      min-height: auto;
+      height: 500px;
+      width: auto; } }
 
 /*# sourceMappingURL=main.css.map */

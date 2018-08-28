@@ -989,6 +989,7 @@ header {
       justify-content: center;
       align-items: center;
       width: 100%;
+      right: 0;
       padding-top: 0;
     }
     .all {
@@ -1546,7 +1547,7 @@ header {
         margin-bottom: 32px;
         @include breakpoint(medium-screen-up) {
           height: 300px;
-          min-height: initial;
+          min-height: auto;
         }
         @include breakpoint(large-screen-up) {
           height: 250px;
@@ -2168,6 +2169,14 @@ footer {
       @include breakpoint(large-screen-up) {
         max-width: 450px;
       }
+      a {
+        border-bottom: 1px solid $white;
+        box-sizing: border-box;
+        line-height: 16px;
+      }
+      p {
+        line-height: 23px; 
+      }
     }
   }
   .social {
@@ -2575,6 +2584,66 @@ footer {
 @keyframes rotation {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  .francis-intro {
+    .text {
+      @include breakpoint(large-screen-up) {
+        right: 0;
+      }
+    }
+    .image {
+      img {
+        @include breakpoint(large-screen-up) {
+          min-height: auto;
+        }
+      }
+    }
+  }
+  .dean-gabriele-image-desktop {
+    img {
+      @include breakpoint(large-screen-up) {
+        min-height: auto;
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .story-grid {
+    .grid-container {
+      .grid-item {
+        .image {
+          @include breakpoint(medium-screen-up) {
+            max-height: 250px;
+            min-height: auto;
+          }
+          img {
+            width: 100%;
+            min-height: auto;
+          }
+        }
+        &.highlight {
+          @include breakpoint(large-screen-up) {
+            .image {
+              width: 60vw;
+              height: 500px;
+              background: $light-blue;
+              margin-bottom: 0;
+              justify-content: center;
+              min-height: 500px;
+              max-height: auto;
+              img {
+                min-height: auto;
+                height: 500px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
