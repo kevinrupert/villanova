@@ -2170,9 +2170,10 @@ footer {
         max-width: 450px;
       }
       a {
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $blue;
         box-sizing: border-box;
         line-height: 16px;
+        color: $blue;
       }
       p {
         line-height: 23px; 

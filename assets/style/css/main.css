@@ -1787,9 +1787,10 @@ footer {
       footer .contact .mail {
         max-width: 450px; } }
     footer .contact .mail a {
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid #5091cd;
       box-sizing: border-box;
-      line-height: 16px; }
+      line-height: 16px;
+      color: #5091cd; }
     footer .contact .mail p {
       line-height: 23px; }
   @media (min-width: 1000px) {
