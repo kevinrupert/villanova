@@ -2026,6 +2026,7 @@ header {
   -webkit-overflow-scrolling: touch;
   @include breakpoint(large-screen-up) {
     z-index: 60;
+    overflow: visible;
   }
   ul {
     width: 100%;

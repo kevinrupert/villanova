@@ -1664,7 +1664,8 @@ header {
   -webkit-overflow-scrolling: touch; }
   @media (min-width: 1000px) {
     .class-notes-nav {
-      z-index: 60; } }
+      z-index: 60;
+      overflow: visible; } }
   .class-notes-nav ul {
     width: 100%;
     display: flex;
