@@ -3,6 +3,16 @@ $('.menu-icon').click(function() {
 }
 );
 
+$('.issue').click(function() {
+  $('.desktop-issues').addClass('open');
+}
+);
+
+$('.close-icon').click(function() {
+  $('.desktop-issues').removeClass('open');
+}
+);
+
 $('.animation-group').waypoint(function() {
   $(this.element).find('.animate-fade, .animate-fade-up').addClass('animated');
 }, {offset: '90%' });

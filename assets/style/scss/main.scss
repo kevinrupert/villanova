@@ -346,7 +346,7 @@ header {
     }
     li {
       opacity: 0;
-      padding: 24px;
+      padding: 16px 24px;
       box-sizing: border-box;
       transition: opacity 0.3s ease-in;
       font-size: 13px;
@@ -383,6 +383,22 @@ header {
             color: $blue;
           }
         }
+      }
+      &.nav-title {
+        color: #EBE4C1;
+        @include breakpoint(large-screen-up) {
+          display: none;
+        }
+      }
+    }
+    .issue-list-container {
+      color: $white;
+      margin-top: 48px;
+      @include breakpoint(large-screen-up) {
+        display: none;
+      }
+      .issue-list-title {
+        color: #EBE4C1;
       }
     }
   }
@@ -426,9 +442,101 @@ header {
       margin-right: 32px;
       font-family: $apex;
       font-size: 13px;
-      color: $gray;
       letter-spacing: 0.5px;
       font-weight: 600;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .desktop-issues {
+    position: fixed;
+    background: $black;
+    color: $white;
+    right: 0;
+    top: 0;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: $apex;
+    text-transform: uppercase;
+    height: 100vh;
+    width: 350px;
+    padding: 24px;
+    box-sizing: border-box;
+    transform: translateX(350px);
+    transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    overflow-y: scroll;
+    li {
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+      a {
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+      }
+      .issue-container {
+        height: 200px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 24px;
+        overflow: hidden;
+        .issue-title {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: $playfair;
+          text-transform: none;
+          letter-spacing: 0;
+          font-size: 32px;
+          background: rgba($black, 0.3);
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        img {
+          width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          position: relative;
+          transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        }
+      }
+    }
+    &.open {
+      transform: translateX(0);    
+      li {
+        opacity: 1;
+        transition-delay: 0.3s;
+        &:nth-child(2) {
+          transition-delay: 0.6s;
+        }
+      }
+    }
+    .desktop-issues-title {
+      margin-bottom: 48px;
+      margin-top: 76px;
+      color: #EBE4C1;
+    }
+    .close-icon {
+      position: absolute;
+      right: 24px;
+      top: 29px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -463,6 +571,15 @@ header {
     @include breakpoint(large-screen-up) {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+  &.max {
+    .text {
+      @include breakpoint(large-screen-up) {
+        :first-child {
+          max-width: 400px;
+        }
+      }
     }
   }
   .image {
@@ -786,7 +903,6 @@ header {
             @include breakpoint(large-screen-up) {
               padding-left: 0;
               padding-right: 0;
-
             }
           }
           .caption-image {
@@ -1419,7 +1535,7 @@ header {
     display: block;
     text-decoration: none;
     &:hover {
-      img {
+      img, video {
         transition: 0.8s all ease;
         transform: scale(1.05);
       }
@@ -1434,7 +1550,7 @@ header {
     @include breakpoint(large-screen-up) {
       height: 80vh;
     }
-    img {
+    img, video {
       width: 100%;
       min-height: 100%;
       object-fit: cover;
@@ -1453,10 +1569,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: $image-overlay;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     @include breakpoint(large-screen-up) {
       padding: 80px;
       justify-content: center;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     }
     @include breakpoint(extra-large-screen-up) {
       padding: 200px;
@@ -1799,11 +1916,19 @@ header {
       &.father-peter {
         width: 600px;
       }
+      &.title-align {
+        margin-top: 32px;
+      }
     }
     .article-aside-image {
       width: 100%;
       img {
         width: 100%;
+      }
+      &.round {
+        img {
+          border-radius: 100%;
+        }
       }
     }
     .article-quote {
