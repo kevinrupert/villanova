@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /
+RewriteBase /villanova/
 RewriteCond %{REQUEST_URI} !^/(summer-2018/)$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
