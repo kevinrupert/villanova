@@ -45,7 +45,7 @@
 
 $small-screen: 400px;
 $medium-screen: 700px;
-$large-screen: 1000px;
+$large-screen: 1100px;
 $extra-large-screen: 1600px;
 
 // Global
@@ -552,6 +552,9 @@ header {
   background: $black;
   height: 18px;
   margin-bottom: 16px;
+  &.green {
+    background: #C3D656;
+  }
 }
 
 .rule-2 {
@@ -577,7 +580,7 @@ header {
     .text {
       @include breakpoint(large-screen-up) {
         :first-child {
-          max-width: 400px;
+          max-width: 600px;
         }
       }
     }
@@ -838,6 +841,25 @@ header {
     @include breakpoint(extra-large-screen-up) {
       justify-content: center;
     }
+    &.fifty-years {
+      background: $cream;
+      @include breakpoint(large-screen-up) {
+        justify-content: center;
+      }
+    }
+    &.pm-tips, &.punch-list, &.storm-water {
+      @include breakpoint(large-screen-up) {
+        justify-content: center;
+      }
+    }
+    &.storm-water {
+      background: $cream;
+      margin-top: 32px;
+      @include breakpoint(large-screen-up) {
+        margin-top: 80px;
+        padding-bottom: 80px;
+      }
+    }
     .side-column {
       margin-top: 32px;
       border-left: 18px solid $black;
@@ -856,12 +878,56 @@ header {
           width: 100%;
         }
       }
+      &.punch-list {
+        .rule-1 {
+          display: none;
+          @include breakpoint(large-screen-up) {
+            display: block;
+          }
+        }
+      }
+      &.fifty-years {
+        color: #00A2DA;
+        border-left: 1px solid $black;
+        font-weight: 600;
+        @include breakpoint(large-screen-up) {
+          text-align: center;
+          border-left: none;
+          .container {
+            border-right: 1px solid $black;
+            height: calc(100% - 80px);
+          }
+        }
+        .title-1 {
+          @include breakpoint(large-screen-up) {
+            font-size: 56px;
+            line-height: 56px;
+          }
+        }
+      }
     }
     &.reverse {
       flex-direction: row;
       .side-column {
         padding: 0 0 0 32px;
         box-sizing: border-box;
+        &.storm-water {
+          color: $red;
+          @include breakpoint(large-screen-up) {
+            width: auto;
+          }
+          .sans {
+            max-width: 200px;
+          }
+          .stat {
+            font-size: 64px; 
+            line-height: 1;
+            letter-spacing: -2px;
+            @include breakpoint(large-screen-up) {
+              font-size: 76px;
+            }
+          }
+        }
         @include breakpoint(large-screen-up) {
           padding: 0 32px 0 0;
           border-left: none;
@@ -2634,6 +2700,384 @@ footer {
         line-height: 18px;
         margin-top: 4px;
       }
+    }
+  }
+}
+
+.hope-flies-intro {
+  background-color: $black;
+  color: $white;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(100vh - 76px);
+  }
+  .text {
+    padding: 32px;
+    box-sizing: border-box;
+    z-index: 10;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 76px;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    @include breakpoint(large-screen-up) {
+      height: calc(100vh - 76px);
+      display: flex;
+      justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      .title-1 {
+        font-size: 220px;
+        line-height: 220px;
+        margin-top: -30px;
+        margin-bottom: 48px;
+      }
+      .paragraph-container {
+        margin-left: 420px;
+        width: 300px;
+        margin-top: -24px;
+      }
+    }
+
+  }
+  .image {
+    height: 500px;
+    @include breakpoint(large-screen-up) {
+      height: calc(100vh - 76px);
+      width: 100%;
+      overflow: hidden;
+    }
+    video, img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.hope-flies-open {
+  overflow: hidden;
+  &.center {
+    .text {
+      max-width: 800px;
+    }
+  }
+  .text {
+    position: relative;
+    .drop {
+      color: #C3D656;
+      position: absolute;
+      left: -70px;
+      top: -12px;
+      font-size: 200px;
+      line-height: 200px;
+      z-index: 1;
+      @include breakpoint(large-screen-up) {
+        font-size: 520px;
+        line-height: 520px;
+        left: -224px;
+        top: -24px;
+      }
+    }
+    .regular {
+      z-index: 2;
+      position: relative;
+      @include breakpoint(large-screen-up) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.hope-flies-outro {
+  background: $cream;
+}
+
+.hope-flies-list {
+  margin-top: 8px;
+  li {
+    display: flex;
+    align-items: center;
+    line-height: 0.8;
+    margin-bottom: 8px;
+    .bullet {
+      width: 12px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.fifty-years-intro {
+  color: $white;
+  background: $black;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .text {
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .title-container {
+      @include breakpoint(large-screen-up) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .number {
+      font-size: 100px;
+      line-height: 100px;
+      margin-top: -32px;
+      margin-bottom: 8px;
+      @include breakpoint(large-screen-up) {
+        font-size: 300px;
+        line-height: 300px;
+        margin-top: -120px;
+        letter-spacing: -20px;
+        margin-right: 24px;
+      }
+    }
+    .headline {
+      @include breakpoint(large-screen-up) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+  .image {
+    height: 500px;
+    overflow: hidden;
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      height: calc(100vh - 76px);
+    }
+    img {
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+} 
+
+.timeline {
+  background: #192141;
+  color: $white;
+  @include breakpoint(extra-large-screen-up) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title-1 {
+      width: 100%;
+      max-width: 1200px;
+    }
+  }
+  .timeline-container {
+    box-sizing: border-box;
+    margin-top: 48px;
+    position: relative;
+    @include breakpoint(large-screen-up) {
+      margin-top: 80px;
+    }
+    @include breakpoint(extra-large-screen-up) {
+      max-width: 1200px;
+      width: 100%;
+    }
+    .vertical-rule {
+      width: 4px;
+      height: 100%;
+      background: $white;
+      position: absolute;
+      top: 0;
+      left: 6px;
+      @include breakpoint(large-screen-up) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .year-markers {
+      display: none;
+      @include breakpoint(large-screen-up) {
+        display: block;
+        position: absolute;
+        top: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .marker {
+          width: 100px;
+          height: 2px;
+          background: $white;
+        }
+      }
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      @include breakpoint(large-screen-up) {
+        display: block;
+        width: 50%;
+        margin-top: 0;
+      }
+      &.left {
+        @include breakpoint(large-screen-up) {
+          .marker {
+            flex-direction: row-reverse;
+            margin-right: -12px;
+            .dot {
+              width: 24px;
+              height: 24px;
+            }
+            .rule {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &.right {
+        @include breakpoint(large-screen-up) {
+          margin-left: 50%;
+          .marker {
+            margin-left: -12px;
+            .dot {
+              width: 24px;
+              height: 24px;
+            }
+            .rule {
+              width: 100%;
+            }
+          }
+          .text {
+            max-width: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .container {
+              max-width: 400px;
+            }
+          }
+        }
+      }
+      .marker {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        .dot {
+          width: 16px;
+          height: 16px;
+          background: $white;
+          border-radius: 100%;
+        }
+        .rule {
+          background: $white;
+          height: 1px;
+          width: 32px;
+        }
+      }
+      .text {
+        flex: 2;
+        @include breakpoint(large-screen-up) {
+          max-width: 400px;
+        }
+        .year {
+          color: #C3D656;
+        }
+        img {
+          width: 100%;
+          @include breakpoint(large-screen-up) {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.built-intro {
+  position: relative;
+  .text {
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    @include breakpoint(large-screen-up) {
+      background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+      padding: 64px;
+    }
+  }
+  .image {
+    height: 500px;
+    overflow: hidden;
+    @include breakpoint(large-screen-up) {
+      height: calc(100vh - 76px);
+    }
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.pm-tips {
+  @include breakpoint(large-screen-up) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-left: 1px solid $black;
+      padding-left: 32px;
+      height: calc(100% - 80px);
+    }
+  }
+  .title-3 {
+    color: $red;
+  }
+  .number {
+    background: $red;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: 600;
+    border-radius: 100%;
+    margin-bottom: 8px;
+    &.big {
+      width: 56px;
+      height: 56px;
+      font-size: 32px;
+    }
+  }
+  ul {
+    margin-top: 24px;
+    li {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 16px;
     }
   }
 }
