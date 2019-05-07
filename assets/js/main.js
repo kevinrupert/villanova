@@ -14,10 +14,10 @@ $('.close-icon').click(function() {
 );
 
 $('.animation-group').waypoint(function() {
-  $(this.element).find('.animate-fade, .animate-fade-up').addClass('animated');
+  $(this.element).find('.animate-fade, .animate-fade-up, .animate-scale, .animate-width').addClass('animated');
 }, {offset: '90%' });
 
-$('.animate-fade, .animate-fade-up').waypoint(function() {
+$('.animate-fade, .animate-fade-up, .animate-scale, .animate-width').waypoint(function() {
   $(this.element).addClass('animated');
 }, {offset: '90%' });
 

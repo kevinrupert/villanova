@@ -580,7 +580,7 @@ header {
     .text {
       @include breakpoint(large-screen-up) {
         :first-child {
-          max-width: 600px;
+          max-width: 400px;
         }
       }
     }
@@ -605,7 +605,7 @@ header {
       justify-content: space-between;
     }
     .sans {
-      line-height: 14px;
+      line-height: 16px;
       &.max {
         max-width: 800px;
         line-height: 16px;
@@ -847,7 +847,7 @@ header {
         justify-content: center;
       }
     }
-    &.pm-tips, &.punch-list, &.storm-water {
+    &.pm-tips, &.punch-list, &.storm-water, &.hope {
       @include breakpoint(large-screen-up) {
         justify-content: center;
       }
@@ -858,6 +858,15 @@ header {
       @include breakpoint(large-screen-up) {
         margin-top: 80px;
         padding-bottom: 80px;
+      }
+    }
+    &.hope {
+      .side-column {
+        border-left: none;
+        margin-left: -32px;
+        @include breakpoint(large-screen-up) {
+          margin-left: none;
+        }
       }
     }
     .side-column {
@@ -1811,6 +1820,9 @@ header {
     padding: 80px;
   }
   .going-nova-title {
+    p {
+      max-width: 646px;
+    }
     @include breakpoint(large-screen-up) {
       padding-bottom: 80px;
       box-sizing: border-box;
@@ -1830,6 +1842,9 @@ header {
   }
   .instagram {
     width: 100%;
+    img {
+      width: 100%;
+    }
     @include breakpoint(large-screen-up) {
       padding: 16px;
       box-sizing: border-box;
@@ -1992,8 +2007,13 @@ header {
         width: 100%;
       }
       &.round {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
           border-radius: 100%;
+          width: 200px;
+          height: auto;
         }
       }
     }
@@ -2015,6 +2035,9 @@ header {
       }
       .rule-2 {
         margin-top: 16px;
+        &.mar-top-48 {
+          margin-top: 48px;
+        }
       }
     }
   }
@@ -2033,7 +2056,7 @@ header {
     box-sizing: border-box;
     @include breakpoint(large-screen-up) {
       width: 50%;
-      padding: 48px;
+      padding: 120px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -2140,6 +2163,10 @@ header {
             width: 50%;
             padding-left: 32px;
             box-sizing: border-box;
+          }
+          &.photo {
+            padding-left: 0;
+            width: 100%;
           }
         }
         .image {
@@ -2811,8 +2838,8 @@ footer {
 }
 
 .fifty-years-intro {
-  color: $white;
-  background: $black;
+  color: $black;
+  background: $white;
   @include breakpoint(large-screen-up) {
     display: flex;
     flex-direction: row-reverse;
@@ -2940,7 +2967,7 @@ footer {
               height: 24px;
             }
             .rule {
-              width: 100%;
+              // width: 100%;
             }
           }
         }
@@ -2955,7 +2982,7 @@ footer {
               height: 24px;
             }
             .rule {
-              width: 100%;
+              // width: 100%;
             }
           }
           .text {
@@ -2982,13 +3009,13 @@ footer {
         .rule {
           background: $white;
           height: 1px;
-          width: 32px;
+          // width: 32px;
         }
       }
       .text {
         flex: 2;
         @include breakpoint(large-screen-up) {
-          max-width: 400px;
+          max-width: 500px;
         }
         .year {
           color: #C3D656;
@@ -2996,7 +3023,40 @@ footer {
         img {
           width: 100%;
           @include breakpoint(large-screen-up) {
-            max-width: 400px;
+            max-width: 500px;
+          }
+        }
+      }
+      &.blue {
+        color: #00A3DA;
+        .rule, .dot {
+          background: #00A3DA;
+        }
+        .text {
+          .year {
+            color: #00A3DA;
+          }
+        }
+      }
+      &.green {
+        color: #7BC192;
+        .rule, .dot {
+          background: #7BC192;
+        }
+        .text {
+          .year {
+            color: #7BC192;
+          }
+        }
+      }
+      &.orange {
+        color: #F7C34B;
+        .rule, .dot {
+          background: #F7C34B;
+        }
+        .text {
+          .year {
+            color: #F7C34B;
           }
         }
       }
@@ -3116,6 +3176,7 @@ footer {
       height: 820px;
       padding: 0;
       padding-left: 80px;
+      overflow-y: hidden;
     }
   }
   .paragraph-container {
@@ -3251,6 +3312,31 @@ footer {
   }
 }
 
+.change-maker-container {
+  margin-top: 76px;
+  @include breakpoint(large-screen-up) {
+    display: flex;
+  }
+  .image-container {
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 64px 0 0 64px;
+      box-sizing: border-box;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .text-container {
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      width: 50%;
+      padding: 64px;
+    }
+  }
+}
+
 
 
 
@@ -3287,6 +3373,28 @@ footer {
   }
   &.animated {
     opacity: 1;
+  }
+}
+
+.animate-width {
+  width: 0px;
+  transition: all 0.3s ease 0.75s;
+  &.animated {
+    width: 32px;
+  }
+  @include breakpoint(large-screen-up) {
+    width: 0;
+    &.animated {
+      width: 100%;
+    }
+  }
+}
+
+.animate-scale {
+  transform: scale(0);
+  transition: all 0.3s ease 0.5s;
+  &.animated {
+    transform: scale(1);
   }
 }
 
