@@ -156,6 +156,9 @@ body {
       margin-top: 12px;
     }
   }
+  &.blue {
+    color: $blue;
+  } 
   .drop-1 {
     font-size: 118px;
     line-height: 0.8;
@@ -175,6 +178,24 @@ body {
     color: $black;
     text-decoration: none;
     border-bottom: 1px solid $black;
+  }
+}
+
+.list {
+  list-style-type: disc;
+  font-size: 18px;
+  line-height: 26px;
+  padding-left: 48px;
+  box-sizing: border-box;
+  @include breakpoint(large-screen-up) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  li {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -570,6 +591,16 @@ header {
   @include breakpoint(large-screen-up) {
     width: 100%;
   }
+  &.stack {
+    padding-left: 0;
+    .text {
+      display: block;
+      .photo {
+        margin-left: 0;
+        margin-top: 8px;
+      }
+    }
+  }
   &.inline {
     @include breakpoint(large-screen-up) {
       padding-left: 0;
@@ -685,6 +716,9 @@ header {
           margin-bottom: 80px;
         }
       }
+      &.inline {
+        margin-top: 48px;
+      }
     }
     .inline-image {
       margin-top: 32px;
@@ -759,6 +793,63 @@ header {
       &.wide {
         .image {
           max-width: 1400px;
+        }
+      }
+    }
+  }
+  &.paying-it-forward {
+    background: $light-gray;
+  }
+  &.opening-doors {
+    .red {
+      color: $red;
+    }
+  }
+  &.community-of-scholars {
+    background: $black;
+    color: $white;
+    .title-2 {
+      color: $red;
+    }
+  }
+  &.in-their-words {
+    background: $light-gray;
+    .title-2 {
+      color: $red;
+    }
+    .quote-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-rows: repeat(7, auto);
+      grid-row-gap: 24px;
+      .grid-item {
+        display: flex;
+        border-bottom: 1px solid $black;
+        padding-bottom: 24px;
+        box-sizing: border-box;
+        &:last-child {
+          border-bottom: none;
+        }
+        .image {
+          width: 20%;
+          margin-right: 24px;
+          @include breakpoint(large-screen-up) {
+            width: 25%;
+          }
+          img {
+            width: 100%;
+            border-radius: 100%;
+          }
+        }
+        .text {
+          flex: 2;
+          width: 80%;
+          @include breakpoint(large-screen-up) {
+            width: 75%;
+          }
+        }
+        .sans {
+          margin-top: 8px;
         }
       }
     }
@@ -908,6 +999,39 @@ header {
         }
       }
     }
+    .stats {
+      margin-top: 24px;
+      .large {
+        font-family: $chronicle;
+        font-size: 28px;
+        line-height: 0.9;
+      }
+      .stat {
+        margin-top: 24px;
+      }
+      .number {
+        font-size: 64px;
+        letter-spacing: -2px;
+      }
+    }
+    .pull-quote {
+      max-width: 1400px;
+      padding: 24px 0;
+      @include breakpoint(large-screen-up) {
+        padding: 0;
+        margin-top: 80px;
+        max-width: 900px;
+        &.mar-bot {
+          margin-bottom: 80px;
+        }
+      }
+      &.inline {
+        margin-top: 24px;
+        @include breakpoint(large-screen-up) {
+          margin-bottom: 24px;
+        }
+      }
+    }
     @include breakpoint(large-screen-up) {
       padding: 0;
       display: flex;
@@ -923,7 +1047,7 @@ header {
         justify-content: center;
       }
     }
-    &.pm-tips, &.punch-list, &.storm-water, &.hope {
+    &.pm-tips, &.punch-list, &.storm-water, &.hope, &.making-the-brain, &.the-spark, &.driving-force {
       @include breakpoint(large-screen-up) {
         justify-content: center;
       }
@@ -950,10 +1074,43 @@ header {
       border-left: 18px solid $black;
       padding-left: 32px;
       box-sizing: border-box;
+      &.way-into-the-brain {
+        .spotlight {
+          color: $red;
+        }
+        .title-2 {
+          font-family: $apex;
+          font-weight: 300;
+          margin-top: 16px;
+        }
+        .drop {
+          font-weight: 300;
+        }
+      }
       @include breakpoint(large-screen-up) {
         width: 360px;
         margin-top: 80px;
         border: none;
+        &.wide {
+          width: 500px;
+          padding-bottom: 80px;
+        }
+        &.thin-rule {
+          .container {
+            border-left: 1px solid $black;
+            padding-left: 16px;
+            box-sizing: border-box;
+            // height: calc(100% - 80px);
+          }
+          &.right {
+            .container {
+              border-left: none;
+              border-right: 1px solid $black;
+              padding-left: none;
+              padding-right: 24px;
+            }
+          }
+        }
       }
       @include breakpoint(extra-large-screen-up) {
         margin-right: 100px;
@@ -961,6 +1118,14 @@ header {
       .side-column-image {
         img {
           width: 100%;
+        }
+      }
+      &.graduation-day {
+        .title-3 {
+          color: $red;
+        }
+        .drop {
+          font-weight: 300;
         }
       }
       &.punch-list {
@@ -1030,12 +1195,24 @@ header {
       @include breakpoint(large-screen-up) {
         padding: 80px;
         box-sizing: border-box;
+        &.float-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
       }
       .text {
         @include breakpoint(large-screen-up) {
           flex: 2;
           width: 100%;
           max-width: 645px;
+        }
+      }
+      .pull-quote {
+        &.max {
+          @include breakpoint(large-screen-up) {
+            max-width: 645px;
+          }
         }
       }
       .inline-image {
@@ -3174,6 +3351,16 @@ footer {
   }
 }
 
+.making-the-brain {
+  @include breakpoint(large-screen-up) {
+    .container {
+      border-left: 1px solid $black;
+      padding-left: 32px;
+      height: calc(100% - 80px);
+    }
+  }
+}
+
 .pm-tips {
   @include breakpoint(large-screen-up) {
     .container {
@@ -3409,6 +3596,453 @@ footer {
     @include breakpoint(large-screen-up) {
       width: 50%;
       padding: 64px;
+    }
+  }
+}
+
+.opportunity-intro {
+  background: $black;
+  color: $white;
+  text-align: center;
+  .column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9 {
+    line-height: 0;
+    margin: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .title-1 {
+    line-height: 45px;
+    @include breakpoint(large-screen-up) {
+      font-size: 4vw;
+      line-height: 1;
+    }
+  }
+  .column-4 {
+    grid-column: 1 / 4;
+    padding: 48px 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(large-screen-up) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 1;
+      flex-direction: column;
+    }
+    .desktop-subhead {
+      margin-top: 48px;
+      max-width: 280px;
+      display: none;
+      @include breakpoint(large-screen-up) {
+        display: initial;
+      }
+    }
+  }
+  .column-9 {
+    grid-column: 2 / 4;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint(large-screen-up) {
+      display: none;
+    }
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 300px 1fr 1fr;
+  @include breakpoint(large-screen-up) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+.smart-brain-intro {
+	background: linear-gradient(-45deg, #4DC1E3, #A4D4B8, #4DC1E3);
+	background-size: 400% 400%;
+	animation: gradientBG 8s ease infinite;
+  color: $white;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+  @include breakpoint(large-screen-up) {
+    height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    padding: 32px 32px 0 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      height: 80vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img {
+      width: 100%;
+      @include breakpoint(large-screen-up) {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+  .subhead-container {
+    color: $black;
+    @include breakpoint(large-screen-up) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 500px;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+  }
+  .text-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 32px;
+    position: relative;
+    z-index: 2;
+    @include breakpoint(large-screen-up) {
+      grid-template-columns: repeat(11, 9vw);
+      grid-template-rows: 1fr;
+    }
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba($white, 0.5);
+      border-style: dotted;
+      height: 100%;
+      &.space {
+        display: none;
+        @include breakpoint(large-screen-up) {
+          display: initial;
+        }
+      }
+      .title-1 {
+        font-size: 10vw;
+        line-height: 1;
+        padding-bottom: 1vw;
+        @include breakpoint(large-screen-up) {
+          font-size: 8vw;
+        }
+      }
+      &:nth-child(5), &:nth-child(6), &:nth-child(11) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.smart-brain-impact {
+  color: $white;
+  background: #00A8B2;
+  .title-1 {
+    font-size: 32px;
+    line-height: 1;
+    @include breakpoint(large-screen-up) {
+      font-size: 48px;
+    }
+  }
+  .impact {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    background: $white;
+    color: $black;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    @include breakpoint(large-screen-up) {
+      font-size: 16px;
+      padding: 16px 24px;
+    }
+  }
+  .quote-grid {
+    margin-top: 24px;
+    @include breakpoint(large-screen-up) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 24px;
+      margin-top: 48px;
+    }
+    .grid-item {
+      background: $white;
+      color: $black;
+      margin-bottom: 24px;
+      @include breakpoint(large-screen-up) {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        padding: 24px;
+        box-sizing: border-box;
+        .bold {
+          color: #00A8B2;
+        }
+        .quote {
+          font-size: 22px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+.sister-act-intro {
+  position: relative;
+  .text {
+    background: #ececec;
+    padding: 32px;
+    box-sizing: border-box;
+    @include breakpoint(large-screen-up) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 500px;
+      z-index: 3;
+      background: none;
+    }
+    .title-1 {
+      color: #F0A92C;
+    }
+  }
+  .image {
+    position: relative;
+    @include breakpoint(large-screen-up) {
+      height: calc(120vh - 76px);  
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      overflow: hidden;
+    }
+    .gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      height: 20px;
+      background: linear-gradient(to top, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.7) 100%);
+      @include breakpoint(large-screen-up) {
+        height: 50vh;
+      }
+    }
+    img {
+      width: 100%;
+      @include breakpoint(large-screen-up) {
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.sister-act-open {
+  padding-bottom: 0;
+
+  .regular {
+    z-index: 2;
+    position: relative;
+    @include breakpoint(large-screen-up) {
+      font-size: 28px;
+      line-height: 36px;
+      text-align: justify;
+      .drop-1 {
+        font-size: 123px;
+      }
+    }
+  }
+}
+
+.driving-force-intro {
+  position: relative;
+  .text {
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    @include breakpoint(large-screen-up) {
+      padding: 64px;
+    }
+  }
+  .image {
+    height: 500px;
+    overflow: hidden;
+    @include breakpoint(large-screen-up) {
+      height: calc(100vh - 76px);
+    }
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.driving-force-aside {
+  border-left: none !important;
+  padding-left: 0 !important;
+  .article-quote {
+    @include breakpoint(large-screen-up) {
+      text-align: center;
+      .regular {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 8px;
+      }
+    }
+    .big-quote {
+      font-size: 48px;
+      @include breakpoint(large-screen-up) {
+        font-size: 100px;
+        height: 40px;
+      }
+    }
+    .rule-2 {
+      margin-top: 16px;
+      &.mar-top-48 {
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+.driving-force-stats {
+  background: #4D86A1;
+  color: $white;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  .large {
+    max-width: 800px;
+  }
+  .small {
+    text-transform: uppercase;
+  }
+  .state-grid {
+    margin-top: 24px;
+    @include breakpoint(large-screen-up) {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .icon {
+      margin-bottom: 16px;
+      @include breakpoint(large-screen-up) {
+        height: 48px;
+      }
+    }
+    .title, .stat {
+      padding: 24px;
+      min-height: 100px;
+      box-sizing: border-box;
+      display: flex;
+      margin-top: -1px;
+      // align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid $white;
+      @include breakpoint(large-screen-up) {
+        margin-left: -1px;
+        min-height: none;
+      }
+    }
+    .title {
+      align-items: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 24px;
+      @include breakpoint(large-screen-up) {
+        margin-top: -1px;
+      }
+    }
+    .stat {
+      .large {
+        font-family: $chronicle;
+      }
+    }
+    .pa-1 {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+    }
+    .pa-2 {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    }
+    .pa-3 {
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+    }
+    .pa-4 {
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+    }
+    .pa-5 {
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+    }
+    .del-1 {
+      grid-column: 2 / 2;
+      grid-row: 1 / 1;
+    }
+    .del-2 {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+    }
+    .del-3 {
+      grid-column: 2 / 2;
+      grid-row: 3 / 3;
+    }
+    .del-4 {
+      grid-column: 2 / 2;
+      grid-row: 4 / 4;
+    }
+    .del-5 {
+      grid-column: 2 / 2;
+      grid-row: 5 / 5;
     }
   }
 }
