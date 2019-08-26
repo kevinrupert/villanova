@@ -169,6 +169,9 @@ body {
       font-size: 113px;
       line-height: 0.75;
     }
+    &.tall {
+      margin-bottom: 24px;
+    }
     &.j {
       font-size: 99px;
       margin-left: 20px;
@@ -543,6 +546,9 @@ header {
         transition-delay: 0.3s;
         &:nth-child(2) {
           transition-delay: 0.6s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0.9s;
         }
       }
     }
@@ -3583,7 +3589,7 @@ footer {
   .image-container {
     @include breakpoint(large-screen-up) {
       width: 50%;
-      padding: 64px 0 0 64px;
+      padding: 64px 0 64px 64px;
       box-sizing: border-box;
     }
     img {
@@ -4043,6 +4049,33 @@ footer {
     .del-5 {
       grid-column: 2 / 2;
       grid-row: 5 / 5;
+    }
+  }
+}
+
+.commons-grid {
+  display: grid;
+  margin-top: 24px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 32px;
+  text-align: center;
+  @include breakpoint(medium-screen-up) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  img {
+    width: 70%;
+    border-radius: 100%;
+  }
+  .number {
+    font-size: 36px;
+    @include breakpoint(large-screen-up) {
+      font-size: 48px;
+    }
+  }
+  .label {
+    @include breakpoint(large-screen-up) {
+      font-size: 24px;
     }
   }
 }

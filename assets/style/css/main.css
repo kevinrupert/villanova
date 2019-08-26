@@ -173,6 +173,8 @@ body {
       .regular .drop-1 {
         font-size: 113px;
         line-height: 0.75; } }
+    .regular .drop-1.tall {
+      margin-bottom: 24px; }
     .regular .drop-1.j {
       font-size: 99px;
       margin-left: 20px; }
@@ -493,6 +495,8 @@ header {
         transition-delay: 0.3s; }
         header .desktop-issues.open li:nth-child(2) {
           transition-delay: 0.6s; }
+        header .desktop-issues.open li:nth-child(3) {
+          transition-delay: 0.9s; }
     header .desktop-issues .desktop-issues-title {
       margin-bottom: 48px;
       margin-top: 76px;
@@ -2904,7 +2908,7 @@ footer {
   @media (min-width: 1100px) {
     .change-maker-container .image-container {
       width: 50%;
-      padding: 64px 0 0 64px;
+      padding: 64px 0 64px 64px;
       box-sizing: border-box; } }
   .change-maker-container .image-container img {
     width: 100%; }
@@ -3284,6 +3288,28 @@ footer {
     .driving-force-stats .state-grid .del-5 {
       grid-column: 2 / 2;
       grid-row: 5 / 5; }
+
+.commons-grid {
+  display: grid;
+  margin-top: 24px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 32px;
+  text-align: center; }
+  @media (min-width: 700px) {
+    .commons-grid {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  .commons-grid img {
+    width: 70%;
+    border-radius: 100%; }
+  .commons-grid .number {
+    font-size: 36px; }
+    @media (min-width: 1100px) {
+      .commons-grid .number {
+        font-size: 48px; } }
+  @media (min-width: 1100px) {
+    .commons-grid .label {
+      font-size: 24px; } }
 
 .animate-fade {
   opacity: 0;
