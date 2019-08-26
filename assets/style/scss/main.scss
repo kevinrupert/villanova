@@ -169,6 +169,11 @@ body {
       font-size: 113px;
       line-height: 0.75;
     }
+    .hang {
+      @include breakpoint(large-screen-up) {
+        margin-left: -48px;
+      }
+    }
     &.tall {
       margin-bottom: 24px;
     }

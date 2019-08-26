@@ -173,6 +173,9 @@ body {
       .regular .drop-1 {
         font-size: 113px;
         line-height: 0.75; } }
+    @media (min-width: 1100px) {
+      .regular .drop-1 .hang {
+        margin-left: -48px; } }
     .regular .drop-1.tall {
       margin-bottom: 24px; }
     .regular .drop-1.j {
