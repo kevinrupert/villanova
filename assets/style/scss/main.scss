@@ -698,7 +698,9 @@ header {
     }
     .text {
       max-width: 645px;
+      width: 100%;
     }
+
     .stats {
       margin-top: 48px;
       .large {
@@ -729,6 +731,9 @@ header {
       }
       &.inline {
         margin-top: 48px;
+        &.mar-bot {
+          margin-bottom: 48px;
+        }
       }
     }
     .inline-image {
@@ -744,7 +749,7 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-width: 900px;
+        max-width: 645px;
         .caption {
           width: 100%;
           align-items: flex-start;
@@ -767,6 +772,7 @@ header {
       }
       .video {
         width: 100%;
+        max-width: 645px;
         .video-wrapper {
           width: 100%;
           height: 0;
@@ -812,6 +818,37 @@ header {
     background: $light-gray;
   }
   &.opening-doors {
+    .intro {
+      max-width: 500px;
+    }
+    .grid {
+      margin-top: 48px;
+      .grid-item {
+        margin-top: 24px;
+        .title-2 {
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 1;
+          letter-spacing: 0.5px;
+          margin-bottom: 8px;
+          max-width: 300px;
+        }
+      }
+    }
+    @include breakpoint(large-screen-up) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+        .grid-item {
+          margin-top: 0;
+          border-top: 1px solid $black;
+          padding-top: 16px;
+          box-sizing: border-box;
+        }
+      }
+    }
     .red {
       color: $red;
     }
@@ -1895,6 +1932,20 @@ header {
       object-fit: cover;
       transition: 0.8s all ease;
     }
+    &.opp {
+      justify-content: flex-end;
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        @include breakpoint(large-screen-up) {
+          // width: 100%;
+          // min-height: 100%;
+          // object-fit: cover;
+          transition: 0.8s all ease;
+        }
+      }
+    }
   }
   .text {
     position: absolute;
@@ -2234,6 +2285,9 @@ header {
     }
     .stats {
       margin-top: 48px;
+      &.vision {
+        color: #4D86A1;
+      }
       .large {
         font-family: $chronicle;
         letter-spacing: -2px;
@@ -2455,6 +2509,7 @@ header {
     margin-bottom: 48px;
     @include breakpoint(large-screen-up) {
       padding-left: 80px;
+      margin-bottom: 64px;
     }
   }
   .decade {
@@ -2489,6 +2544,28 @@ header {
         }
       }
     }
+    .highlight {
+      // margin-bottom: 32px;
+      .title-2 {
+        margin: 0;
+      }
+      @include breakpoint(large-screen-up) {
+        display: grid;
+        grid-template-columns: 400px 645px;
+        grid-column-gap: 48px;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        &.last {
+          padding-bottom: 0;
+        }
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -2512,6 +2589,7 @@ header {
   }
   ul {
     width: 100%;
+    min-width: 600px;
     display: flex;
     align-items: center;
     padding: 0 32px;
@@ -2522,6 +2600,15 @@ header {
       height: 20px;
       display: flex;
       align-items: center;
+      &.memoriam {
+        width: 200px;
+        a {
+          font-size: 14px;
+          width: 100px;
+          line-height: 1;
+          margin-top: 2px;
+        }
+      }
       a {
         color: $white;
         text-decoration: none;
@@ -3608,6 +3695,27 @@ footer {
       width: 50%;
       padding: 64px;
     }
+    .inline-image {
+      margin-top: 32px;
+      .video {
+        width: 100%;
+        .video-wrapper {
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          padding-bottom: 56.25%;
+          position: relative;
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -3707,9 +3815,9 @@ footer {
     color: $black;
     @include breakpoint(large-screen-up) {
       position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 500px;
+      right: 10vw;
+      bottom: 3vw;
+      width: 260px;
       padding: 32px;
       box-sizing: border-box;
     }
@@ -3767,12 +3875,39 @@ footer {
 
 .smart-brain-impact {
   color: $white;
-  background: #00A8B2;
+  // background: #00A8B2;
+  position: relative;
   .title-1 {
     font-size: 32px;
     line-height: 1;
     @include breakpoint(large-screen-up) {
       font-size: 48px;
+      max-width: 645px;
+      width: 100%;
+    }
+  }
+  .intro-text {
+    background: #00A8B2;
+    width: 100%;
+    padding: 48px 24px 24px 24px;
+    box-sizing: border-box;
+    .regular {
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    @include breakpoint(large-screen-up) {
+      padding: 84px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .regular {
+        width: 100%;
+        max-width: 645px;
+      }
     }
   }
   .impact {
@@ -3787,7 +3922,6 @@ footer {
     line-height: 1;
     font-weight: 600;
     @include breakpoint(large-screen-up) {
-      font-size: 16px;
       padding: 16px 24px;
     }
   }
@@ -3796,8 +3930,10 @@ footer {
     @include breakpoint(large-screen-up) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      column-gap: 24px;
-      margin-top: 48px;
+      // column-gap: 24px;
+      margin-top: 0;
+      padding: 32px;
+      box-sizing: border-box;
     }
     .grid-item {
       background: $white;
@@ -3808,6 +3944,12 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-right: 1px solid #A4D4B8;
+        padding: 0 32px;
+        box-sizing: border-box;
+        &:last-child {
+          border-right: none;
+        }
       }
       &:last-child {
         margin-bottom: 0;
@@ -3818,14 +3960,21 @@ footer {
         }
       }
       .text {
-        padding: 24px;
+        // padding: 24px;
         box-sizing: border-box;
+        .hang {
+          @include breakpoint(large-screen-up) {
+            margin-left: -8px;
+          }
+        }
         .bold {
-          color: #00A8B2;
+          font-weight: 300;
+          font-size: 18px;
         }
         .quote {
-          font-size: 22px;
-          line-height: 1.2;
+          font-size: 20px;
+          line-height: 1.4;
+          margin: 24px 0;
         }
       }
     }
@@ -3840,14 +3989,18 @@ footer {
     box-sizing: border-box;
     @include breakpoint(large-screen-up) {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 2vw;
+      left: 30vw;
       width: 100%;
       height: 500px;
       z-index: 3;
       background: none;
+      max-width: 450px;
+      .subhead {
+        max-width: 170px;
+      }
     }
-    .title-1 {
+    .large {
       color: #F0A92C;
     }
   }
@@ -3958,6 +4111,26 @@ footer {
       }
     }
   }
+  .stat {
+    margin-top: 48px;
+    .regular {
+      color: #4D86A1;
+      font-size: 32px;
+      line-height: 34px;
+      .number {
+        @include breakpoint(large-screen-up) {
+          font-size: 64px;
+          line-height: 1;
+        }
+      }
+      .jobs {
+        @include breakpoint(large-screen-up) {
+          font-size: 48px;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
 }
 
 .driving-force-stats {
@@ -3977,7 +4150,7 @@ footer {
     @include breakpoint(large-screen-up) {
       margin-top: 48px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
     }
     .icon {
@@ -4011,49 +4184,195 @@ footer {
       }
     }
     .stat {
+      @include breakpoint(large-screen-up) {
+        text-align: center;
+      }
       .large {
         font-family: $chronicle;
+        .million {
+          font-size: 32px;
+        }
+      }
+      @include breakpoint(large-screen-up) {
+        .stat-label {
+          display: none;
+        }
+      }
+      &.desktop-label {
+        display: none;
+        @include breakpoint(large-screen-up) {
+          display: flex;
+        }
+      }
+    }
+    .total {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+      @include breakpoint(large-screen-up) {
+        border-width: 3px 1px 1px 0;
+        text-align: right;
+        justify-content: flex-end;
+        position: relative;
+        ::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          background: $white;
+          height: 3px;
+        }
+      }
+    }
+    .operations {
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+      @include breakpoint(large-screen-up) {
+        border-width: 1px 1px 1px 0;
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+    .investments {
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+      @include breakpoint(large-screen-up) {
+        border-width: 1px 1px 1px 0;
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+    .spending {
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+      @include breakpoint(large-screen-up) {
+        border-width: 1px 1px 0 0;
+        text-align: right;
+        justify-content: flex-end;
       }
     }
     .pa-1 {
-      grid-column: 1 / 1;
+      grid-column: 2 / 2;
       grid-row: 1 / 1;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 0;
+      }
     }
     .pa-2 {
-      grid-column: 1 / 1;
+      grid-column: 2 / 2;
       grid-row: 2 / 2;
+      @include breakpoint(large-screen-up) {
+        border-width: 3px 1px 1px 1px;
+        position: relative;
+        ::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -2px;
+          width: calc(100% + 2px);
+          background: $white;
+          height: 3px;
+        }
+      }
     }
     .pa-3 {
-      grid-column: 1 / 1;
+      grid-column: 2 / 2;
       grid-row: 3 / 3;
     }
     .pa-4 {
-      grid-column: 1 / 1;
+      grid-column: 2 / 2;
       grid-row: 4 / 4;
     }
     .pa-5 {
-      grid-column: 1 / 1;
+      grid-column: 2 / 2;
       grid-row: 5 / 5;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 1px;
+      }
     }
     .del-1 {
-      grid-column: 2 / 2;
+      grid-column: 3 / 3;
       grid-row: 1 / 1;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 0;
+      }
     }
     .del-2 {
-      grid-column: 2 / 2;
+      grid-column: 3 / 3;
       grid-row: 2 / 2;
+      @include breakpoint(large-screen-up) {
+        border-width: 3px 1px 1px 1px;
+        position: relative;
+        ::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -2px;
+          width: calc(100% + 2px);
+          background: $white;
+          height: 3px;
+        }
+      }
     }
     .del-3 {
-      grid-column: 2 / 2;
+      grid-column: 3 / 3;
       grid-row: 3 / 3;
     }
     .del-4 {
-      grid-column: 2 / 2;
+      grid-column: 3 / 3;
       grid-row: 4 / 4;
     }
     .del-5 {
-      grid-column: 2 / 2;
+      grid-column: 3 / 3;
       grid-row: 5 / 5;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 1px;
+      }
+    }
+    .rad-1 {
+      grid-column: 4 / 4;
+      grid-row: 1 / 1;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 0;
+      }
+    }
+    .rad-2 {
+      grid-column: 4 / 4;
+      grid-row: 2 / 2;
+      @include breakpoint(large-screen-up) {
+        border-width: 3px 0 1px 1px;
+        position: relative;
+        ::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -2px;
+          width: calc(100% + 2px);
+          background: $white;
+          height: 3px;
+        }
+      }
+    }
+    .rad-3 {
+      grid-column: 4 / 4;
+      grid-row: 3 / 3;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 1px 1px;
+      }
+    }
+    .rad-4 {
+      grid-column: 4 / 4;
+      grid-row: 4 / 4;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 1px 1px;
+      }
+    }
+    .rad-5 {
+      grid-column: 4 / 4;
+      grid-row: 5 / 5;
+      @include breakpoint(large-screen-up) {
+        border-width: 0 0 0 1px;
+      }
     }
   }
 }
