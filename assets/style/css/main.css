@@ -567,7 +567,7 @@ header {
   .caption .text .sans {
     line-height: 16px; }
     .caption .text .sans.max {
-      max-width: 800px;
+      max-width: 500px;
       line-height: 16px; }
   .caption .text .photo {
     text-transform: uppercase;
@@ -3168,7 +3168,7 @@ footer {
   .smart-brain-impact .intro-text {
     background: #00A8B2;
     width: 100%;
-    padding: 48px 24px 24px 24px;
+    padding: 48px 32px 32px 32px;
     box-sizing: border-box; }
     .smart-brain-impact .intro-text .regular {
       text-transform: uppercase;
@@ -3201,8 +3201,8 @@ footer {
       .smart-brain-impact .impact {
         padding: 16px 24px; } }
   .smart-brain-impact .quote-grid {
-    margin-top: 24px;
-    padding: 0 24px 24px 24px; }
+    margin-top: 32px;
+    padding: 0 32px 32px 32px; }
     @media (min-width: 1100px) {
       .smart-brain-impact .quote-grid {
         display: grid;
